@@ -36,7 +36,11 @@
             Dim newName As String = dgwFolders.Rows(i).Cells(3).Value.ToString
             Dim path As String = dgwFolders.Rows(i).Cells("FullPath").Value.ToString
             If Not String.IsNullOrEmpty(newName) Then
-                My.Computer.FileSystem.RenameDirectory(path, newName)
+                Try
+                    My.Computer.FileSystem.RenameDirectory(path, newName)
+                Catch ex As Exception
+                    MessageBox.Show(ex.Message, "Errod")
+                End Try
                 dgwFolders.Rows(i).Cells(2).Value = newName
                 dgwFolders.Rows(i).Cells(3).Value = ""
                 dgwFolders.Rows(i).Cells("FullPath").Value = path.Substring(0, path.LastIndexOf("\") + 1) + newName
@@ -64,7 +68,11 @@
         End If
     End Sub
 
-    Private Sub btnCreate_Click(sender As Object, e As EventArgs) Handles btnCreate.Click
+    Private Sub dgwFolders_CellBeginEdit(sender As Object, e As DataGridViewCellCancelEventArgs) Handles dgwFolders.CellBeginEdit
+
+    End Sub
+
+    Private Sub dgwFolders_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles dgwFolders.CellEndEdit
 
     End Sub
 End Class
