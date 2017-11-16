@@ -127,6 +127,8 @@
   <ItemGroup>
     <Content Include="Resource\folder_a.png" />
     <Content Include="Resource\folder_b.png" />
+    <None Include="Resource\undo_ico.png" />
+    <None Include="Resource\redo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

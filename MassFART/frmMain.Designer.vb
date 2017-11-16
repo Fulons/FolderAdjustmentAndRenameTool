@@ -31,13 +31,13 @@ Partial Class frmMain
         Me.Button1 = New System.Windows.Forms.Button()
         Me.fbdFolder = New System.Windows.Forms.FolderBrowserDialog()
         Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.dgwFolders = New System.Windows.Forms.DataGridView()
         Me.FullPath = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FolderPic = New System.Windows.Forms.DataGridViewImageColumn()
         Me.OldName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NewName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgwFolders, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -82,7 +82,7 @@ Partial Class frmMain
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(14, 101)
+        Me.Button3.Location = New System.Drawing.Point(14, 102)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(126, 39)
         Me.Button3.TabIndex = 7
@@ -100,29 +100,21 @@ Partial Class frmMain
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(12, 378)
+        Me.Button4.Location = New System.Drawing.Point(14, 167)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(126, 39)
         Me.Button4.TabIndex = 10
         Me.Button4.Text = "Rename All"
         Me.Button4.UseVisualStyleBackColor = True
         '
-        'Button5
-        '
-        Me.Button5.Location = New System.Drawing.Point(14, 434)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(41, 39)
-        Me.Button5.TabIndex = 11
-        Me.Button5.Text = "Undo All"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(61, 434)
+        Me.Button6.BackgroundImage = Global.MassFART.My.Resources.Resources.redo1
+        Me.Button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button6.Location = New System.Drawing.Point(213, 432)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(41, 39)
+        Me.Button6.Size = New System.Drawing.Size(43, 42)
         Me.Button6.TabIndex = 12
-        Me.Button6.Text = "Redo All"
         Me.Button6.UseVisualStyleBackColor = True
         '
         'dgwFolders
@@ -160,7 +152,17 @@ Partial Class frmMain
         Me.NewName.HeaderText = "New"
         Me.NewName.Name = "NewName"
         '
-        'Form
+        'Button5
+        '
+        Me.Button5.BackgroundImage = Global.MassFART.My.Resources.Resources.undo_ico1
+        Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button5.Location = New System.Drawing.Point(164, 431)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(43, 42)
+        Me.Button5.TabIndex = 11
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -176,9 +178,8 @@ Partial Class frmMain
         Me.Controls.Add(Me.MenuStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Name = "Form"
+        Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "SyncNamer 1.0"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         CType(Me.dgwFolders, System.ComponentModel.ISupportInitialize).EndInit()
