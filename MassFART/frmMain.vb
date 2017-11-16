@@ -30,6 +30,20 @@
         Next
     End Sub
 
+    Private Sub DoRename()
+        For i As Integer = 0 To dgwFolders.RowCount - 1
+            'Dim oldName As String = dgwFolders.Rows(i).Cells(2).Value.ToString
+            Dim newName As String = dgwFolders.Rows(i).Cells(3).Value.ToString
+            Dim path As String = dgwFolders.Rows(i).Cells("FullPath").Value.ToString
+            If Not String.IsNullOrEmpty(newName) Then
+                My.Computer.FileSystem.RenameDirectory(path, newName)
+                dgwFolders.Rows(i).Cells(2).Value = newName
+                dgwFolders.Rows(i).Cells(3).Value = ""
+                dgwFolders.Rows(i).Cells("FullPath").Value = path.Substring(0, path.LastIndexOf("\") + 1) + newName
+            End If
+        Next
+    End Sub
+
     Private Sub OpenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenToolStripMenuItem.Click
         fbdFolder.ShowDialog()
         LoadPath(fbdFolder.SelectedPath())
@@ -42,17 +56,6 @@
         folderMixImage = Image.FromFile(resourcePath + "mix_fol.bmp")
         folderPopulatedImage = Image.FromFile(resourcePath + "pop_fol.bmp")
         folderSubFoldersImage = Image.FromFile(resourcePath + "sub_fol.bmp")
-    End Sub
-
-    Private Sub DoRename()
-        For i As Integer = 0 To dgwFolders.RowCount - 1
-            'Dim oldName As String = dgwFolders.Rows(i).Cells(2).Value.ToString
-            Dim newName As String = dgwFolders.Rows(i).Cells(3).Value.ToString
-            Dim path As String = dgwFolders.Rows(i).Cells("FullPath").Value.ToString
-            If Not String.IsNullOrEmpty(newName) Then
-                My.Computer.FileSystem.RenameDirectory(path, newName)
-            End If
-        Next
     End Sub
 
     Private Sub btnRename_Click(sender As Object, e As EventArgs) Handles btnRename.Click
