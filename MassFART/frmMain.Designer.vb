@@ -111,7 +111,7 @@ Partial Class frmMain
         '
         Me.Button6.BackgroundImage = Global.MassFART.My.Resources.Resources.redo1
         Me.Button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button6.Location = New System.Drawing.Point(213, 432)
+        Me.Button6.Location = New System.Drawing.Point(213, 431)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(43, 42)
         Me.Button6.TabIndex = 12

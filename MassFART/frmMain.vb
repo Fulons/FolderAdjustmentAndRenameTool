@@ -1,18 +1,11 @@
 ﻿Public Class frmMain
-
-    Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub SaveAsToolStripMenuItem_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
+    Private folderEmptyImage As Image
+    Private resourcePath As String
     Private Sub LoadPath(path As String)
         Dim dirs() As String = IO.Directory.GetDirectories(path)
         For Each dir As String In dirs
             Dim pos As Integer = dir.LastIndexOf("\") + 1
-            dgwFolders.Rows.Add(dir, Nothing, dir.Substring(pos, dir.Length - pos), "")
+            dgwFolders.Rows.Add(dir, folderEmptyImage, dir.Substring(pos, dir.Length - pos), "")
         Next
     End Sub
 
@@ -25,11 +18,8 @@
 
     End Sub
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-
-    End Sub
-
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-
+    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        resourcePath = Application.StartupPath() + "\..\..\Resource\"
+        folderEmptyImage = Image.FromFile(resourcePath + "folder_a.png")
     End Sub
 End Class
