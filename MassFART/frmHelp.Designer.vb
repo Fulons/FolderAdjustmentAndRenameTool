@@ -34,7 +34,7 @@ Partial Class frmHelp
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.Size = New System.Drawing.Size(404, 370)
         Me.RichTextBox1.TabIndex = 0
-        Me.RichTextBox1.Text = ""
+        Me.RichTextBox1.Text = "Help file"
         '
         'frmHelp
         '
