@@ -22,4 +22,8 @@
         resourcePath = Application.StartupPath() + "\..\..\Resource\"
         folderEmptyImage = Image.FromFile(resourcePath + "folder_a.png")
     End Sub
+
+    Private Sub testSub()
+
+    End Sub
 End Class
