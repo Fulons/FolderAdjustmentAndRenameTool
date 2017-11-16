@@ -21,6 +21,7 @@
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         resourcePath = Application.StartupPath() + "\..\..\Resource\"
         folderEmptyImage = Image.FromFile(resourcePath + "folder_a.png")
+
     End Sub
 
     Private Sub testSub()
