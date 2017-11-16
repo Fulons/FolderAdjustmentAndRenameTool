@@ -30,7 +30,7 @@ Partial Class frmMain
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.fbdFolder = New System.Windows.Forms.FolderBrowserDialog()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.btnRename = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.dgwFolders = New System.Windows.Forms.DataGridView()
         Me.FullPath = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -98,14 +98,14 @@ Partial Class frmMain
         Me.Button1.Text = "Rename Parent Folder"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Button4
+        'btnRename
         '
-        Me.Button4.Location = New System.Drawing.Point(14, 167)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(126, 39)
-        Me.Button4.TabIndex = 10
-        Me.Button4.Text = "Rename All"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnRename.Location = New System.Drawing.Point(14, 167)
+        Me.btnRename.Name = "btnRename"
+        Me.btnRename.Size = New System.Drawing.Size(126, 39)
+        Me.btnRename.TabIndex = 10
+        Me.btnRename.Text = "Rename All"
+        Me.btnRename.UseVisualStyleBackColor = True
         '
         'Button6
         '
@@ -171,7 +171,7 @@ Partial Class frmMain
         Me.Controls.Add(Me.dgwFolders)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.btnRename)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
@@ -195,7 +195,7 @@ Partial Class frmMain
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents fbdFolder As System.Windows.Forms.FolderBrowserDialog
-    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents btnRename As System.Windows.Forms.Button
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents dgwFolders As DataGridView
