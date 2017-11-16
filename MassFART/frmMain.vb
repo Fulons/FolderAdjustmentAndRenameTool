@@ -5,7 +5,9 @@
     Private folderMixImage As Image
 
     Private resourcePath As String
+
     Private Sub LoadPath(path As String)
+        dgwFolders.Rows.Clear()
         Dim dirs() As String = IO.Directory.GetDirectories(path)
         For Each dir As String In dirs
             Dim subFiles() As String = IO.Directory.GetFiles(dir)
@@ -33,10 +35,6 @@
         LoadPath(fbdFolder.SelectedPath())
     End Sub
 
-    Private Sub dgwFolders_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgwFolders.CellContentClick
-
-    End Sub
-
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         resourcePath = Application.StartupPath() + "\..\..\Resource\"
 
@@ -61,5 +59,9 @@
         If MessageBox.Show("ARE YOU SURE???", "Confirmation", Windows.Forms.MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
             DoRename()
         End If
+    End Sub
+
+    Private Sub btnCreate_Click(sender As Object, e As EventArgs) Handles btnCreate.Click
+
     End Sub
 End Class

@@ -26,7 +26,7 @@ Partial Class frmMain
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnCreate = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.fbdFolder = New System.Windows.Forms.FolderBrowserDialog()
@@ -71,14 +71,14 @@ Partial Class frmMain
         Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.HelpToolStripMenuItem.Text = "Help"
         '
-        'Button2
+        'btnCreate
         '
-        Me.Button2.Location = New System.Drawing.Point(14, 37)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(126, 39)
-        Me.Button2.TabIndex = 6
-        Me.Button2.Text = "Create Folder"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnCreate.Location = New System.Drawing.Point(14, 37)
+        Me.btnCreate.Name = "btnCreate"
+        Me.btnCreate.Size = New System.Drawing.Size(126, 39)
+        Me.btnCreate.TabIndex = 6
+        Me.btnCreate.Text = "Create Folder"
+        Me.btnCreate.UseVisualStyleBackColor = True
         '
         'Button3
         '
@@ -174,7 +174,7 @@ Partial Class frmMain
         Me.Controls.Add(Me.btnRename)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.btnCreate)
         Me.Controls.Add(Me.MenuStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MainMenuStrip = Me.MenuStrip1
@@ -191,7 +191,7 @@ Partial Class frmMain
     Friend WithEvents FileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents OpenToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents HelpToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents btnCreate As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents fbdFolder As System.Windows.Forms.FolderBrowserDialog
