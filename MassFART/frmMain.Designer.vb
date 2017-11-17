@@ -25,17 +25,6 @@ Partial Class frmMain
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.btnCreate = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.fbdFolder = New System.Windows.Forms.FolderBrowserDialog()
-        Me.btnRename = New System.Windows.Forms.Button()
-        Me.dgwFolders = New System.Windows.Forms.DataGridView()
-        Me.FullPath = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FolderPic = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.OldName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NewName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UndoCtrlZToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RedoCtrlYToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -53,9 +42,22 @@ Partial Class frmMain
         Me.FiletypeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CurrentFolderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SelectedFoldersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewHelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
+        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btnCreate = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.fbdFolder = New System.Windows.Forms.FolderBrowserDialog()
+        Me.btnRename = New System.Windows.Forms.Button()
+        Me.dgwFolders = New System.Windows.Forms.DataGridView()
+        Me.FullPath = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FolderPic = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.OldName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NewName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgwFolders, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -72,7 +74,7 @@ Partial Class frmMain
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenToolStripMenuItem, Me.ToolStripSeparator6, Me.ExitToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "File"
@@ -81,8 +83,117 @@ Partial Class frmMain
         '
         Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
         Me.OpenToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
-        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
         Me.OpenToolStripMenuItem.Text = "Open..."
+        '
+        'EditToolStripMenuItem
+        '
+        Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UndoCtrlZToolStripMenuItem, Me.RedoCtrlYToolStripMenuItem, Me.ToolStripSeparator1, Me.RenameFiletypeToolStripMenuItem, Me.CopyCtrlVToolStripMenuItem, Me.PaseCtrlVToolStripMenuItem, Me.DelToolStripMenuItem, Me.ToolStripSeparator2, Me.FindToolStripMenuItem, Me.ToolStripSeparator3, Me.SelectAllToolStripMenuItem, Me.ToolStripSeparator4, Me.RenameFiletypeToolStripMenuItem1})
+        Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
+        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
+        Me.EditToolStripMenuItem.Text = "Edit"
+        '
+        'UndoCtrlZToolStripMenuItem
+        '
+        Me.UndoCtrlZToolStripMenuItem.Name = "UndoCtrlZToolStripMenuItem"
+        Me.UndoCtrlZToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Z), System.Windows.Forms.Keys)
+        Me.UndoCtrlZToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
+        Me.UndoCtrlZToolStripMenuItem.Text = "Undo                  "
+        '
+        'RedoCtrlYToolStripMenuItem
+        '
+        Me.RedoCtrlYToolStripMenuItem.Name = "RedoCtrlYToolStripMenuItem"
+        Me.RedoCtrlYToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Y), System.Windows.Forms.Keys)
+        Me.RedoCtrlYToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
+        Me.RedoCtrlYToolStripMenuItem.Text = "Redo                   "
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(196, 6)
+        '
+        'RenameFiletypeToolStripMenuItem
+        '
+        Me.RenameFiletypeToolStripMenuItem.Name = "RenameFiletypeToolStripMenuItem"
+        Me.RenameFiletypeToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
+        Me.RenameFiletypeToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
+        Me.RenameFiletypeToolStripMenuItem.Text = "Cut           "
+        '
+        'CopyCtrlVToolStripMenuItem
+        '
+        Me.CopyCtrlVToolStripMenuItem.Name = "CopyCtrlVToolStripMenuItem"
+        Me.CopyCtrlVToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
+        Me.CopyCtrlVToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
+        Me.CopyCtrlVToolStripMenuItem.Text = "Copy "
+        '
+        'PaseCtrlVToolStripMenuItem
+        '
+        Me.PaseCtrlVToolStripMenuItem.Name = "PaseCtrlVToolStripMenuItem"
+        Me.PaseCtrlVToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Y), System.Windows.Forms.Keys)
+        Me.PaseCtrlVToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
+        Me.PaseCtrlVToolStripMenuItem.Text = "Paste"
+        '
+        'DelToolStripMenuItem
+        '
+        Me.DelToolStripMenuItem.Name = "DelToolStripMenuItem"
+        Me.DelToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Delete
+        Me.DelToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
+        Me.DelToolStripMenuItem.Text = "Delete"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(196, 6)
+        '
+        'FindToolStripMenuItem
+        '
+        Me.FindToolStripMenuItem.Name = "FindToolStripMenuItem"
+        Me.FindToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.F), System.Windows.Forms.Keys)
+        Me.FindToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
+        Me.FindToolStripMenuItem.Text = "Find..."
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(196, 6)
+        '
+        'SelectAllToolStripMenuItem
+        '
+        Me.SelectAllToolStripMenuItem.Name = "SelectAllToolStripMenuItem"
+        Me.SelectAllToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.A), System.Windows.Forms.Keys)
+        Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
+        Me.SelectAllToolStripMenuItem.Text = "Select All"
+        '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(196, 6)
+        '
+        'RenameFiletypeToolStripMenuItem1
+        '
+        Me.RenameFiletypeToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FiletypeToolStripMenuItem})
+        Me.RenameFiletypeToolStripMenuItem1.Name = "RenameFiletypeToolStripMenuItem1"
+        Me.RenameFiletypeToolStripMenuItem1.Size = New System.Drawing.Size(199, 22)
+        Me.RenameFiletypeToolStripMenuItem1.Text = "Advanced Rename"
+        '
+        'FiletypeToolStripMenuItem
+        '
+        Me.FiletypeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CurrentFolderToolStripMenuItem, Me.SelectedFoldersToolStripMenuItem})
+        Me.FiletypeToolStripMenuItem.Name = "FiletypeToolStripMenuItem"
+        Me.FiletypeToolStripMenuItem.Size = New System.Drawing.Size(115, 22)
+        Me.FiletypeToolStripMenuItem.Text = "Filetype"
+        '
+        'CurrentFolderToolStripMenuItem
+        '
+        Me.CurrentFolderToolStripMenuItem.Name = "CurrentFolderToolStripMenuItem"
+        Me.CurrentFolderToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.CurrentFolderToolStripMenuItem.Text = "Current Folder"
+        '
+        'SelectedFoldersToolStripMenuItem
+        '
+        Me.SelectedFoldersToolStripMenuItem.Name = "SelectedFoldersToolStripMenuItem"
+        Me.SelectedFoldersToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.SelectedFoldersToolStripMenuItem.Text = "Selected Folders"
         '
         'HelpToolStripMenuItem
         '
@@ -90,6 +201,23 @@ Partial Class frmMain
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
         Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.HelpToolStripMenuItem.Text = "Help"
+        '
+        'ViewHelpToolStripMenuItem
+        '
+        Me.ViewHelpToolStripMenuItem.Name = "ViewHelpToolStripMenuItem"
+        Me.ViewHelpToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
+        Me.ViewHelpToolStripMenuItem.Text = "View Help"
+        '
+        'ToolStripSeparator5
+        '
+        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(124, 6)
+        '
+        'AboutToolStripMenuItem
+        '
+        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
+        Me.AboutToolStripMenuItem.Text = "About"
         '
         'btnCreate
         '
@@ -162,131 +290,16 @@ Partial Class frmMain
         Me.NewName.HeaderText = "New"
         Me.NewName.Name = "NewName"
         '
-        'EditToolStripMenuItem
+        'ExitToolStripMenuItem
         '
-        Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UndoCtrlZToolStripMenuItem, Me.RedoCtrlYToolStripMenuItem, Me.ToolStripSeparator1, Me.RenameFiletypeToolStripMenuItem, Me.CopyCtrlVToolStripMenuItem, Me.PaseCtrlVToolStripMenuItem, Me.DelToolStripMenuItem, Me.ToolStripSeparator2, Me.FindToolStripMenuItem, Me.ToolStripSeparator3, Me.SelectAllToolStripMenuItem, Me.ToolStripSeparator4, Me.RenameFiletypeToolStripMenuItem1})
-        Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
-        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
-        Me.EditToolStripMenuItem.Text = "Edit"
+        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
+        Me.ExitToolStripMenuItem.Text = "Exit"
         '
-        'UndoCtrlZToolStripMenuItem
+        'ToolStripSeparator6
         '
-        Me.UndoCtrlZToolStripMenuItem.Name = "UndoCtrlZToolStripMenuItem"
-        Me.UndoCtrlZToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Z), System.Windows.Forms.Keys)
-        Me.UndoCtrlZToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
-        Me.UndoCtrlZToolStripMenuItem.Text = "Undo                  "
-        '
-        'RedoCtrlYToolStripMenuItem
-        '
-        Me.RedoCtrlYToolStripMenuItem.Name = "RedoCtrlYToolStripMenuItem"
-        Me.RedoCtrlYToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Y), System.Windows.Forms.Keys)
-        Me.RedoCtrlYToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
-        Me.RedoCtrlYToolStripMenuItem.Text = "Redo                   "
-        '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(192, 6)
-        '
-        'RenameFiletypeToolStripMenuItem
-        '
-        Me.RenameFiletypeToolStripMenuItem.Name = "RenameFiletypeToolStripMenuItem"
-        Me.RenameFiletypeToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
-        Me.RenameFiletypeToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
-        Me.RenameFiletypeToolStripMenuItem.Text = "Cut           "
-        '
-        'CopyCtrlVToolStripMenuItem
-        '
-        Me.CopyCtrlVToolStripMenuItem.Name = "CopyCtrlVToolStripMenuItem"
-        Me.CopyCtrlVToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
-        Me.CopyCtrlVToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
-        Me.CopyCtrlVToolStripMenuItem.Text = "Copy "
-        '
-        'PaseCtrlVToolStripMenuItem
-        '
-        Me.PaseCtrlVToolStripMenuItem.Name = "PaseCtrlVToolStripMenuItem"
-        Me.PaseCtrlVToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Y), System.Windows.Forms.Keys)
-        Me.PaseCtrlVToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
-        Me.PaseCtrlVToolStripMenuItem.Text = "Paste"
-        '
-        'DelToolStripMenuItem
-        '
-        Me.DelToolStripMenuItem.Name = "DelToolStripMenuItem"
-        Me.DelToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Delete
-        Me.DelToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
-        Me.DelToolStripMenuItem.Text = "Delete"
-        '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(196, 6)
-        '
-        'FindToolStripMenuItem
-        '
-        Me.FindToolStripMenuItem.Name = "FindToolStripMenuItem"
-        Me.FindToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.F), System.Windows.Forms.Keys)
-        Me.FindToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
-        Me.FindToolStripMenuItem.Text = "Find..."
-        '
-        'ToolStripSeparator3
-        '
-        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(196, 6)
-        '
-        'SelectAllToolStripMenuItem
-        '
-        Me.SelectAllToolStripMenuItem.Name = "SelectAllToolStripMenuItem"
-        Me.SelectAllToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.A), System.Windows.Forms.Keys)
-        Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
-        Me.SelectAllToolStripMenuItem.Text = "Select All"
-        '
-        'ToolStripSeparator4
-        '
-        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(196, 6)
-        '
-        'RenameFiletypeToolStripMenuItem1
-        '
-        Me.RenameFiletypeToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FiletypeToolStripMenuItem})
-        Me.RenameFiletypeToolStripMenuItem1.Name = "RenameFiletypeToolStripMenuItem1"
-        Me.RenameFiletypeToolStripMenuItem1.Size = New System.Drawing.Size(199, 22)
-        Me.RenameFiletypeToolStripMenuItem1.Text = "Advanced Rename"
-        '
-        'FiletypeToolStripMenuItem
-        '
-        Me.FiletypeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CurrentFolderToolStripMenuItem, Me.SelectedFoldersToolStripMenuItem})
-        Me.FiletypeToolStripMenuItem.Name = "FiletypeToolStripMenuItem"
-        Me.FiletypeToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.FiletypeToolStripMenuItem.Text = "Filetype"
-        '
-        'CurrentFolderToolStripMenuItem
-        '
-        Me.CurrentFolderToolStripMenuItem.Name = "CurrentFolderToolStripMenuItem"
-        Me.CurrentFolderToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
-        Me.CurrentFolderToolStripMenuItem.Text = "Current Folder"
-        '
-        'SelectedFoldersToolStripMenuItem
-        '
-        Me.SelectedFoldersToolStripMenuItem.Name = "SelectedFoldersToolStripMenuItem"
-        Me.SelectedFoldersToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
-        Me.SelectedFoldersToolStripMenuItem.Text = "Selected Folders"
-        '
-        'ViewHelpToolStripMenuItem
-        '
-        Me.ViewHelpToolStripMenuItem.Name = "ViewHelpToolStripMenuItem"
-        Me.ViewHelpToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.ViewHelpToolStripMenuItem.Text = "View Help"
-        '
-        'AboutToolStripMenuItem
-        '
-        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.AboutToolStripMenuItem.Text = "About"
-        '
-        'ToolStripSeparator5
-        '
-        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
+        Me.ToolStripSeparator6.Size = New System.Drawing.Size(152, 6)
         '
         'frmMain
         '
@@ -345,4 +358,6 @@ Partial Class frmMain
     Friend WithEvents ViewHelpToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator5 As ToolStripSeparator
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator6 As ToolStripSeparator
+    Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
 End Class
