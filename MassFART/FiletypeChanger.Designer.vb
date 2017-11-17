@@ -37,7 +37,7 @@ Partial Class FiletypeChanger
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 18)
+        Me.Label1.Location = New System.Drawing.Point(12, 19)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(30, 13)
         Me.Label1.TabIndex = 0
@@ -46,7 +46,7 @@ Partial Class FiletypeChanger
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(85, 15)
+        Me.ComboBox1.Location = New System.Drawing.Point(85, 16)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(150, 21)
         Me.ComboBox1.TabIndex = 1
@@ -54,7 +54,7 @@ Partial Class FiletypeChanger
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 58)
+        Me.Label2.Location = New System.Drawing.Point(12, 59)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(69, 13)
         Me.Label2.TabIndex = 2
@@ -62,7 +62,7 @@ Partial Class FiletypeChanger
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(86, 55)
+        Me.TextBox1.Location = New System.Drawing.Point(86, 56)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(149, 20)
         Me.TextBox1.TabIndex = 3
@@ -115,7 +115,7 @@ Partial Class FiletypeChanger
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(247, 258)
+        Me.ClientSize = New System.Drawing.Size(247, 252)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.Button2)
