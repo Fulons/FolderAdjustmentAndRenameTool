@@ -6,7 +6,11 @@
 
     Private resourcePath As String
 
-    Private Sub LoadPath(path As String)
+    Private Sub LoadPath(path As String, Optional errorLoad As Boolean = False)
+        If errorLoad Then
+
+        Else
+        End If
         dgwFolders.Rows.Clear()
         Dim dirs() As String = IO.Directory.GetDirectories(path)
         For Each dir As String In dirs
@@ -62,7 +66,7 @@
             End If
         Next
         If errorHappened Then
-            LoadPath(fbdFolder.SelectedPath)
+            LoadPath(fbdFolder.SelectedPath, True)
         End If
     End Sub
 
@@ -86,13 +90,5 @@
         If MessageBox.Show("ARE YOU SURE???", "Confirmation", Windows.Forms.MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
             DoRename()
         End If
-    End Sub
-
-    Private Sub dgwFolders_CellBeginEdit(sender As Object, e As DataGridViewCellCancelEventArgs) Handles dgwFolders.CellBeginEdit
-
-    End Sub
-
-    Private Sub dgwFolders_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles dgwFolders.CellEndEdit
-
     End Sub
 End Class
