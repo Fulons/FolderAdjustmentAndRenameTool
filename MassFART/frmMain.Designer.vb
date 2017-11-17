@@ -85,7 +85,7 @@ Partial Class frmMain
         'FileToolStripMenuItem
         '
         Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenToolStripMenuItem, Me.ToolStripSeparator6, Me.ExitToolStripMenuItem})
-        Me.FileToolStripMenuItem.ForeColor = System.Drawing.Color.White
+        Me.FileToolStripMenuItem.ForeColor = System.Drawing.Color.Black
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 19)
         Me.FileToolStripMenuItem.Text = "File"
@@ -93,6 +93,7 @@ Partial Class frmMain
         'OpenToolStripMenuItem
         '
         Me.OpenToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(28, Byte), Integer))
+        Me.OpenToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
         Me.OpenToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
         Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
