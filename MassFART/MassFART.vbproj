@@ -70,10 +70,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FiletypeChanger.Designer.vb">
-      <DependentUpon>FiletypeChanger.vb</DependentUpon>
+    <Compile Include="frmFiletypeChanger.Designer.vb">
+      <DependentUpon>frmFiletypeChanger.vb</DependentUpon>
     </Compile>
-    <Compile Include="FiletypeChanger.vb">
+    <Compile Include="frmFiletypeChanger.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmHelp.Designer.vb">
@@ -105,8 +105,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FiletypeChanger.resx">
-      <DependentUpon>FiletypeChanger.vb</DependentUpon>
+    <EmbeddedResource Include="frmFiletypeChanger.resx">
+      <DependentUpon>frmFiletypeChanger.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHelp.resx">
       <DependentUpon>frmHelp.vb</DependentUpon>

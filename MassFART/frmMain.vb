@@ -80,6 +80,8 @@
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         resourcePath = Application.StartupPath() + "\..\..\Resource\"
 
+        fbdFolder.SelectedPath = resourcePath
+
         folderEmptyImage = Image.FromFile(resourcePath + "emp_fol.bmp")
         folderMixImage = Image.FromFile(resourcePath + "mix_fol.bmp")
         folderPopulatedImage = Image.FromFile(resourcePath + "pop_fol.bmp")
@@ -90,5 +92,13 @@
         If MessageBox.Show("ARE YOU SURE???", "Confirmation", Windows.Forms.MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
             DoRename()
         End If
+    End Sub
+
+    Private Sub SelectedFoldersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectedFoldersToolStripMenuItem.Click, CurrentFolderToolStripMenuItem.Click
+        For Each folder In dgwFolders.SelectedRows
+            frmFiletypeChanger.AddFolder(folder.Cells("Fullpath").Value.ToString)
+        Next
+        frmFiletypeChanger.Init()
+        frmFiletypeChanger.Show()
     End Sub
 End Class

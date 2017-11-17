@@ -25,6 +25,8 @@ Partial Class frmMain
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UndoCtrlZToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RedoCtrlYToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -56,8 +58,6 @@ Partial Class frmMain
         Me.FolderPic = New System.Windows.Forms.DataGridViewImageColumn()
         Me.OldName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NewName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgwFolders, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -85,6 +85,17 @@ Partial Class frmMain
         Me.OpenToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
         Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
         Me.OpenToolStripMenuItem.Text = "Open..."
+        '
+        'ToolStripSeparator6
+        '
+        Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
+        Me.ToolStripSeparator6.Size = New System.Drawing.Size(152, 6)
+        '
+        'ExitToolStripMenuItem
+        '
+        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
+        Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'EditToolStripMenuItem
         '
@@ -180,19 +191,21 @@ Partial Class frmMain
         '
         Me.FiletypeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CurrentFolderToolStripMenuItem, Me.SelectedFoldersToolStripMenuItem})
         Me.FiletypeToolStripMenuItem.Name = "FiletypeToolStripMenuItem"
-        Me.FiletypeToolStripMenuItem.Size = New System.Drawing.Size(115, 22)
+        Me.FiletypeToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.FiletypeToolStripMenuItem.Text = "Filetype"
         '
         'CurrentFolderToolStripMenuItem
         '
         Me.CurrentFolderToolStripMenuItem.Name = "CurrentFolderToolStripMenuItem"
-        Me.CurrentFolderToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.CurrentFolderToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5
+        Me.CurrentFolderToolStripMenuItem.Size = New System.Drawing.Size(178, 22)
         Me.CurrentFolderToolStripMenuItem.Text = "Current Folder"
         '
         'SelectedFoldersToolStripMenuItem
         '
         Me.SelectedFoldersToolStripMenuItem.Name = "SelectedFoldersToolStripMenuItem"
-        Me.SelectedFoldersToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.SelectedFoldersToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F6
+        Me.SelectedFoldersToolStripMenuItem.Size = New System.Drawing.Size(178, 22)
         Me.SelectedFoldersToolStripMenuItem.Text = "Selected Folders"
         '
         'HelpToolStripMenuItem
@@ -289,17 +302,6 @@ Partial Class frmMain
         '
         Me.NewName.HeaderText = "New"
         Me.NewName.Name = "NewName"
-        '
-        'ExitToolStripMenuItem
-        '
-        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
-        Me.ExitToolStripMenuItem.Text = "Exit"
-        '
-        'ToolStripSeparator6
-        '
-        Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
-        Me.ToolStripSeparator6.Size = New System.Drawing.Size(152, 6)
         '
         'frmMain
         '
