@@ -49,17 +49,17 @@ Partial Class frmMain
         Me.ViewHelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.btnCreate = New System.Windows.Forms.Button()
-        Me.btnDelete = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnCreate = New MassFART.ccButton()
+        Me.btnDelete = New MassFART.ccButton()
+        Me.Button1 = New MassFART.ccButton()
         Me.fbdFolder = New System.Windows.Forms.FolderBrowserDialog()
-        Me.btnRename = New System.Windows.Forms.Button()
+        Me.btnRename = New MassFART.ccButton()
         Me.dgwFolders = New System.Windows.Forms.DataGridView()
         Me.FullPath = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FolderPic = New System.Windows.Forms.DataGridViewImageColumn()
         Me.OldName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NewName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button2 = New MassFART.ccButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DeleteFiletype1 = New MassFART.DeleteFiletype()
@@ -260,6 +260,10 @@ Partial Class frmMain
         'btnCreate
         '
         Me.btnCreate.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.btnCreate.borderColor = System.Drawing.Color.Empty
+        Me.btnCreate.disabledBackColor = System.Drawing.Color.Empty
+        Me.btnCreate.disabledBorderColor = System.Drawing.Color.Empty
+        Me.btnCreate.disabledForeColor = System.Drawing.Color.Empty
         Me.btnCreate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
         Me.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCreate.ForeColor = System.Drawing.Color.DarkGray
@@ -431,7 +435,6 @@ Partial Class frmMain
     Friend WithEvents FileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents OpenToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents HelpToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents btnCreate As System.Windows.Forms.Button
     Friend WithEvents btnDelete As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents fbdFolder As System.Windows.Forms.FolderBrowserDialog
@@ -470,4 +473,5 @@ Partial Class frmMain
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents btnCreate As ccButton
 End Class

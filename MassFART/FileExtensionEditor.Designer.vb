@@ -27,8 +27,8 @@ Partial Class FileExtensionEditor
         Me.Label2 = New System.Windows.Forms.Label()
         Me.cmbExistingFileTypes = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnRename = New System.Windows.Forms.Button()
-        Me.btnUndo = New System.Windows.Forms.Button()
+        Me.btnRename = New MassFART.ccButton()
+        Me.btnUndo = New MassFART.ccButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -155,7 +155,7 @@ Partial Class FileExtensionEditor
     Friend WithEvents Label2 As Label
     Friend WithEvents cmbExistingFileTypes As ComboBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents btnRename As Button
-    Friend WithEvents btnUndo As Button
+    Friend WithEvents btnRename As MassFART.ccButton
+    Friend WithEvents btnUndo As MassFART.ccButton
     Friend WithEvents Panel1 As Panel
 End Class

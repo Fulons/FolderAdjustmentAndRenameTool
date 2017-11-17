@@ -27,8 +27,8 @@ Partial Class DeleteFiletype
         Me.cmbExistingFileTypes2 = New System.Windows.Forms.ComboBox()
         Me.txtDisplayNoFiles = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnRename = New System.Windows.Forms.Button()
-        Me.btnUndo = New System.Windows.Forms.Button()
+        Me.btnRename = New ccButton()
+        Me.btnUndo = New ccButton()
         Me.cbSubfolders = New System.Windows.Forms.CheckBox()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -155,7 +155,7 @@ Partial Class DeleteFiletype
     Friend WithEvents cmbExistingFileTypes2 As ComboBox
     Friend WithEvents txtDisplayNoFiles As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents btnRename As Button
-    Friend WithEvents btnUndo As Button
+    Friend WithEvents btnRename As ccButton
+    Friend WithEvents btnUndo As ccButton
     Friend WithEvents cbSubfolders As CheckBox
 End Class
