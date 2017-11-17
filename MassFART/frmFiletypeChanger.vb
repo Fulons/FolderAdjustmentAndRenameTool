@@ -57,4 +57,14 @@
             RecursiveRename(folder)
         Next
     End Sub
+
+
+    Private Sub txtReplacement_TextChanged(sender As Object, e As EventArgs) Handles txtReplacement.TextChanged
+
+    End Sub
+
+    Private Sub cbSubfolders_CheckedChanged(sender As Object, e As EventArgs)
+
+    End Sub
+
 End Class

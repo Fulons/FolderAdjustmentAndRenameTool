@@ -38,60 +38,89 @@ Partial Class frmFiletypeChanger
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 18)
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(30, 32)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(30, 13)
+        Me.Label1.Size = New System.Drawing.Size(33, 15)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Find:"
         '
         'cmbExistingFileTypes
         '
+        Me.cmbExistingFileTypes.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.cmbExistingFileTypes.DropDownHeight = 82
+        Me.cmbExistingFileTypes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbExistingFileTypes.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbExistingFileTypes.ForeColor = System.Drawing.Color.White
         Me.cmbExistingFileTypes.FormattingEnabled = True
-        Me.cmbExistingFileTypes.Location = New System.Drawing.Point(85, 15)
+        Me.cmbExistingFileTypes.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.cmbExistingFileTypes.IntegralHeight = False
+        Me.cmbExistingFileTypes.Location = New System.Drawing.Point(124, 28)
         Me.cmbExistingFileTypes.Name = "cmbExistingFileTypes"
-        Me.cmbExistingFileTypes.Size = New System.Drawing.Size(150, 21)
+        Me.cmbExistingFileTypes.Size = New System.Drawing.Size(166, 23)
         Me.cmbExistingFileTypes.TabIndex = 1
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 58)
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(30, 78)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(69, 13)
+        Me.Label2.Size = New System.Drawing.Size(74, 15)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Replace with"
         '
         'txtReplacement
         '
-        Me.txtReplacement.Location = New System.Drawing.Point(86, 55)
+        Me.txtReplacement.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.txtReplacement.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtReplacement.ForeColor = System.Drawing.Color.White
+        Me.txtReplacement.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.txtReplacement.Location = New System.Drawing.Point(124, 77)
         Me.txtReplacement.Name = "txtReplacement"
-        Me.txtReplacement.Size = New System.Drawing.Size(149, 20)
+        Me.txtReplacement.Size = New System.Drawing.Size(166, 23)
         Me.txtReplacement.TabIndex = 3
         '
         'btnRename
         '
-        Me.btnRename.Location = New System.Drawing.Point(12, 223)
+        Me.btnRename.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.btnRename.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
+        Me.btnRename.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRename.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRename.ForeColor = System.Drawing.Color.DarkGray
+        Me.btnRename.Location = New System.Drawing.Point(30, 379)
         Me.btnRename.Name = "btnRename"
-        Me.btnRename.Size = New System.Drawing.Size(90, 23)
+        Me.btnRename.Size = New System.Drawing.Size(105, 27)
         Me.btnRename.TabIndex = 4
         Me.btnRename.Text = "Rename"
-        Me.btnRename.UseVisualStyleBackColor = True
+        Me.btnRename.UseVisualStyleBackColor = False
         '
         'btnAdd
         '
-        Me.btnAdd.Location = New System.Drawing.Point(145, 91)
+        Me.btnAdd.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
+        Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAdd.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAdd.ForeColor = System.Drawing.Color.DarkGray
+        Me.btnAdd.Location = New System.Drawing.Point(30, 161)
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(90, 23)
+        Me.btnAdd.Size = New System.Drawing.Size(105, 27)
         Me.btnAdd.TabIndex = 5
         Me.btnAdd.Text = "Add"
-        Me.btnAdd.UseVisualStyleBackColor = True
+        Me.btnAdd.UseVisualStyleBackColor = False
         '
         'lvItems
         '
+        Me.lvItems.BackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(78, Byte), Integer))
+        Me.lvItems.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.lvItems.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.Find, Me.Replace})
-        Me.lvItems.Location = New System.Drawing.Point(12, 120)
+        Me.lvItems.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lvItems.ForeColor = System.Drawing.Color.White
+        Me.lvItems.Location = New System.Drawing.Point(30, 202)
         Me.lvItems.Name = "lvItems"
-        Me.lvItems.Size = New System.Drawing.Size(223, 97)
+        Me.lvItems.Size = New System.Drawing.Size(260, 163)
         Me.lvItems.TabIndex = 7
         Me.lvItems.UseCompatibleStateImageBehavior = False
         Me.lvItems.View = System.Windows.Forms.View.Details
@@ -99,37 +128,44 @@ Partial Class frmFiletypeChanger
         'Find
         '
         Me.Find.Text = "Find"
-        Me.Find.Width = 91
+        Me.Find.Width = 131
         '
         'Replace
         '
         Me.Replace.Text = "Replace"
-        Me.Replace.Width = 127
+        Me.Replace.Width = 129
         '
         'btnExit
         '
-        Me.btnExit.Location = New System.Drawing.Point(145, 223)
+        Me.btnExit.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
+        Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnExit.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExit.ForeColor = System.Drawing.Color.DarkGray
+        Me.btnExit.Location = New System.Drawing.Point(185, 379)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(90, 23)
+        Me.btnExit.Size = New System.Drawing.Size(105, 27)
         Me.btnExit.TabIndex = 8
         Me.btnExit.Text = "Exit"
-        Me.btnExit.UseVisualStyleBackColor = True
+        Me.btnExit.UseVisualStyleBackColor = False
         '
         'cbSubfolders
         '
         Me.cbSubfolders.AutoSize = True
-        Me.cbSubfolders.Location = New System.Drawing.Point(26, 91)
+        Me.cbSubfolders.ForeColor = System.Drawing.Color.White
+        Me.cbSubfolders.Location = New System.Drawing.Point(206, 115)
         Me.cbSubfolders.Name = "cbSubfolders"
-        Me.cbSubfolders.Size = New System.Drawing.Size(76, 17)
-        Me.cbSubfolders.TabIndex = 9
+        Me.cbSubfolders.Size = New System.Drawing.Size(82, 19)
+        Me.cbSubfolders.TabIndex = 10
         Me.cbSubfolders.Text = "Subfolders"
         Me.cbSubfolders.UseVisualStyleBackColor = True
         '
         'frmFiletypeChanger
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(247, 258)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(321, 425)
         Me.Controls.Add(Me.cbSubfolders)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.lvItems)
@@ -139,7 +175,9 @@ Partial Class frmFiletypeChanger
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.cmbExistingFileTypes)
         Me.Controls.Add(Me.Label1)
+        Me.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Name = "frmFiletypeChanger"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Advanced Rename"
         Me.ResumeLayout(False)
         Me.PerformLayout()
