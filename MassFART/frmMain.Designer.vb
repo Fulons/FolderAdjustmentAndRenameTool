@@ -49,7 +49,7 @@ Partial Class frmMain
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btnCreate = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.btnDelete = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.fbdFolder = New System.Windows.Forms.FolderBrowserDialog()
         Me.btnRename = New System.Windows.Forms.Button()
@@ -191,7 +191,7 @@ Partial Class frmMain
         '
         Me.FiletypeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CurrentFolderToolStripMenuItem, Me.SelectedFoldersToolStripMenuItem})
         Me.FiletypeToolStripMenuItem.Name = "FiletypeToolStripMenuItem"
-        Me.FiletypeToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.FiletypeToolStripMenuItem.Size = New System.Drawing.Size(115, 22)
         Me.FiletypeToolStripMenuItem.Text = "Filetype"
         '
         'CurrentFolderToolStripMenuItem
@@ -241,14 +241,14 @@ Partial Class frmMain
         Me.btnCreate.Text = "Create Folder"
         Me.btnCreate.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btnDelete
         '
-        Me.Button3.Location = New System.Drawing.Point(14, 102)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(126, 39)
-        Me.Button3.TabIndex = 7
-        Me.Button3.Text = "Delete Folder"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnDelete.Location = New System.Drawing.Point(14, 102)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(126, 39)
+        Me.btnDelete.TabIndex = 7
+        Me.btnDelete.Text = "Delete Folder"
+        Me.btnDelete.UseVisualStyleBackColor = True
         '
         'Button1
         '
@@ -312,7 +312,7 @@ Partial Class frmMain
         Me.Controls.Add(Me.dgwFolders)
         Me.Controls.Add(Me.btnRename)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.btnCreate)
         Me.Controls.Add(Me.MenuStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -331,7 +331,7 @@ Partial Class frmMain
     Friend WithEvents OpenToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents HelpToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents btnCreate As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents btnDelete As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents fbdFolder As System.Windows.Forms.FolderBrowserDialog
     Friend WithEvents btnRename As System.Windows.Forms.Button
