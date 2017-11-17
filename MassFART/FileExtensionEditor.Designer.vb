@@ -37,7 +37,7 @@ Partial Class FileExtensionEditor
         '
         Me.cbSubfolders.AutoSize = True
         Me.cbSubfolders.ForeColor = System.Drawing.Color.White
-        Me.cbSubfolders.Location = New System.Drawing.Point(166, 74)
+        Me.cbSubfolders.Location = New System.Drawing.Point(166, 80)
         Me.cbSubfolders.Name = "cbSubfolders"
         Me.cbSubfolders.Size = New System.Drawing.Size(124, 19)
         Me.cbSubfolders.TabIndex = 15
@@ -50,7 +50,7 @@ Partial Class FileExtensionEditor
         Me.txtReplacement.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtReplacement.ForeColor = System.Drawing.Color.White
         Me.txtReplacement.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.txtReplacement.Location = New System.Drawing.Point(121, 45)
+        Me.txtReplacement.Location = New System.Drawing.Point(121, 51)
         Me.txtReplacement.Name = "txtReplacement"
         Me.txtReplacement.Size = New System.Drawing.Size(169, 23)
         Me.txtReplacement.TabIndex = 14
@@ -60,7 +60,7 @@ Partial Class FileExtensionEditor
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(12, 47)
+        Me.Label2.Location = New System.Drawing.Point(12, 53)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(74, 15)
         Me.Label2.TabIndex = 13
@@ -112,7 +112,7 @@ Partial Class FileExtensionEditor
         Me.btnUndo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
         Me.btnUndo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUndo.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUndo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnUndo.ForeColor = System.Drawing.Color.DarkGray
         Me.btnUndo.Location = New System.Drawing.Point(185, 125)
         Me.btnUndo.Name = "btnUndo"
         Me.btnUndo.Size = New System.Drawing.Size(105, 27)
