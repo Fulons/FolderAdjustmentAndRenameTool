@@ -31,7 +31,7 @@ Partial Class frmFiletypeChanger
         Me.lvItems = New System.Windows.Forms.ListView()
         Me.Find = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Replace = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.btnExit = New System.Windows.Forms.Button()
+        Me.btnUndo = New System.Windows.Forms.Button()
         Me.cbSubfolders = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
@@ -74,11 +74,11 @@ Partial Class frmFiletypeChanger
         '
         'txtReplacement
         '
-        Me.txtReplacement.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.txtReplacement.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
         Me.txtReplacement.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtReplacement.ForeColor = System.Drawing.Color.White
         Me.txtReplacement.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.txtReplacement.Location = New System.Drawing.Point(124, 77)
+        Me.txtReplacement.Location = New System.Drawing.Point(124, 76)
         Me.txtReplacement.Name = "txtReplacement"
         Me.txtReplacement.Size = New System.Drawing.Size(166, 23)
         Me.txtReplacement.TabIndex = 3
@@ -118,6 +118,7 @@ Partial Class frmFiletypeChanger
         Me.lvItems.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.Find, Me.Replace})
         Me.lvItems.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lvItems.ForeColor = System.Drawing.Color.White
+        Me.lvItems.FullRowSelect = True
         Me.lvItems.Location = New System.Drawing.Point(30, 202)
         Me.lvItems.Name = "lvItems"
         Me.lvItems.Size = New System.Drawing.Size(260, 163)
@@ -135,25 +136,25 @@ Partial Class frmFiletypeChanger
         Me.Replace.Text = "Replace"
         Me.Replace.Width = 129
         '
-        'btnExit
+        'btnUndo
         '
-        Me.btnExit.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(55, Byte), Integer))
-        Me.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
-        Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnExit.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnExit.ForeColor = System.Drawing.Color.DarkGray
-        Me.btnExit.Location = New System.Drawing.Point(185, 379)
-        Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(105, 27)
-        Me.btnExit.TabIndex = 8
-        Me.btnExit.Text = "Exit"
-        Me.btnExit.UseVisualStyleBackColor = False
+        Me.btnUndo.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.btnUndo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
+        Me.btnUndo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUndo.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUndo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnUndo.Location = New System.Drawing.Point(185, 379)
+        Me.btnUndo.Name = "btnUndo"
+        Me.btnUndo.Size = New System.Drawing.Size(105, 27)
+        Me.btnUndo.TabIndex = 8
+        Me.btnUndo.Text = "Undo"
+        Me.btnUndo.UseVisualStyleBackColor = False
         '
         'cbSubfolders
         '
         Me.cbSubfolders.AutoSize = True
         Me.cbSubfolders.ForeColor = System.Drawing.Color.White
-        Me.cbSubfolders.Location = New System.Drawing.Point(206, 115)
+        Me.cbSubfolders.Location = New System.Drawing.Point(208, 117)
         Me.cbSubfolders.Name = "cbSubfolders"
         Me.cbSubfolders.Size = New System.Drawing.Size(82, 19)
         Me.cbSubfolders.TabIndex = 10
@@ -167,7 +168,7 @@ Partial Class frmFiletypeChanger
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(321, 425)
         Me.Controls.Add(Me.cbSubfolders)
-        Me.Controls.Add(Me.btnExit)
+        Me.Controls.Add(Me.btnUndo)
         Me.Controls.Add(Me.lvItems)
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.btnRename)
@@ -193,6 +194,6 @@ Partial Class frmFiletypeChanger
     Friend WithEvents lvItems As ListView
     Friend WithEvents Find As ColumnHeader
     Friend WithEvents Replace As ColumnHeader
-    Friend WithEvents btnExit As Button
+    Friend WithEvents btnUndo As Button
     Friend WithEvents cbSubfolders As CheckBox
 End Class

@@ -70,6 +70,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DiscardFiletype.Designer.vb">
+      <DependentUpon>DiscardFiletype.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DiscardFiletype.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmFiletypeChanger.Designer.vb">
       <DependentUpon>frmFiletypeChanger.vb</DependentUpon>
     </Compile>
@@ -105,6 +111,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="DiscardFiletype.resx">
+      <DependentUpon>DiscardFiletype.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmFiletypeChanger.resx">
       <DependentUpon>frmFiletypeChanger.vb</DependentUpon>
     </EmbeddedResource>

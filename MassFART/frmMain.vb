@@ -101,4 +101,8 @@
         frmFiletypeChanger.Init()
         frmFiletypeChanger.Show()
     End Sub
+
+    Private Sub DiscardFiletypesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DiscardFiletypesToolStripMenuItem.Click
+
+    End Sub
 End Class

@@ -72,7 +72,7 @@
         Next
     End Sub
 
-    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnUndo.Click
         Me.Close()
     End Sub
 

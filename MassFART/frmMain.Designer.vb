@@ -58,6 +58,8 @@ Partial Class frmMain
         Me.FolderPic = New System.Windows.Forms.DataGridViewImageColumn()
         Me.OldName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NewName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.DiscardFiletypesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgwFolders, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -99,7 +101,7 @@ Partial Class frmMain
         '
         'EditToolStripMenuItem
         '
-        Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UndoCtrlZToolStripMenuItem, Me.RedoCtrlYToolStripMenuItem, Me.ToolStripSeparator1, Me.RenameFiletypeToolStripMenuItem, Me.CopyCtrlVToolStripMenuItem, Me.PaseCtrlVToolStripMenuItem, Me.DelToolStripMenuItem, Me.ToolStripSeparator2, Me.FindToolStripMenuItem, Me.ToolStripSeparator3, Me.SelectAllToolStripMenuItem, Me.ToolStripSeparator4, Me.RenameFiletypeToolStripMenuItem1})
+        Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UndoCtrlZToolStripMenuItem, Me.RedoCtrlYToolStripMenuItem, Me.ToolStripSeparator1, Me.RenameFiletypeToolStripMenuItem, Me.CopyCtrlVToolStripMenuItem, Me.PaseCtrlVToolStripMenuItem, Me.DelToolStripMenuItem, Me.ToolStripSeparator2, Me.FindToolStripMenuItem, Me.ToolStripSeparator3, Me.SelectAllToolStripMenuItem, Me.ToolStripSeparator4, Me.RenameFiletypeToolStripMenuItem1, Me.DiscardFiletypesToolStripMenuItem})
         Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
         Me.EditToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
         Me.EditToolStripMenuItem.Text = "Edit"
@@ -191,7 +193,7 @@ Partial Class frmMain
         '
         Me.FiletypeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CurrentFolderToolStripMenuItem, Me.SelectedFoldersToolStripMenuItem})
         Me.FiletypeToolStripMenuItem.Name = "FiletypeToolStripMenuItem"
-        Me.FiletypeToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.FiletypeToolStripMenuItem.Size = New System.Drawing.Size(115, 22)
         Me.FiletypeToolStripMenuItem.Text = "Filetype"
         '
         'CurrentFolderToolStripMenuItem
@@ -303,12 +305,29 @@ Partial Class frmMain
         Me.NewName.HeaderText = "New"
         Me.NewName.Name = "NewName"
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(14, 378)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(126, 39)
+        Me.Button2.TabIndex = 11
+        Me.Button2.Text = "Save List as txt"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'DiscardFiletypesToolStripMenuItem
+        '
+        Me.DiscardFiletypesToolStripMenuItem.Name = "DiscardFiletypesToolStripMenuItem"
+        Me.DiscardFiletypesToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F7
+        Me.DiscardFiletypesToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
+        Me.DiscardFiletypesToolStripMenuItem.Text = "Delete Filetype"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLight
         Me.ClientSize = New System.Drawing.Size(519, 487)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.dgwFolders)
         Me.Controls.Add(Me.btnRename)
         Me.Controls.Add(Me.Button1)
@@ -362,4 +381,6 @@ Partial Class frmMain
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator6 As ToolStripSeparator
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Button2 As Button
+    Friend WithEvents DiscardFiletypesToolStripMenuItem As ToolStripMenuItem
 End Class
