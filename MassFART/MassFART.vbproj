@@ -70,10 +70,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DiscardFiletype.Designer.vb">
-      <DependentUpon>DiscardFiletype.vb</DependentUpon>
+    <Compile Include="FileExtensionEditor.Designer.vb">
+      <DependentUpon>FileExtensionEditor.vb</DependentUpon>
     </Compile>
-    <Compile Include="DiscardFiletype.vb">
+    <Compile Include="FileExtensionEditor.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FileHelper.vb" />
+    <Compile Include="FolderHelper.vb" />
+    <Compile Include="frmDiscardFiletype.Designer.vb">
+      <DependentUpon>frmDiscardFiletype.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDiscardFiletype.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmFiletypeChanger.Designer.vb">
@@ -111,8 +119,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DiscardFiletype.resx">
-      <DependentUpon>DiscardFiletype.vb</DependentUpon>
+    <EmbeddedResource Include="FileExtensionEditor.resx">
+      <DependentUpon>FileExtensionEditor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDiscardFiletype.resx">
+      <DependentUpon>frmDiscardFiletype.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmFiletypeChanger.resx">
       <DependentUpon>frmFiletypeChanger.vb</DependentUpon>
