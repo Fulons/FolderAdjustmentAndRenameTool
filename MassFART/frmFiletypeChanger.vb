@@ -32,8 +32,12 @@
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         Dim lvItem As ListViewItem
+        Dim replacement As String = txtReplacement.Text
+        If replacement(0) <> "." Then
+            replacement = "." + replacement
+        End If
         lvItem = lvItems.Items.Add(cmbExistingFileTypes.Text)
-        lvItem.SubItems.Add(txtReplacement.Text)
+        lvItem.SubItems.Add(replacement)
     End Sub
 
     Private Sub RecursiveRename(path As String)
@@ -41,7 +45,7 @@
         For Each file In subFiles
             For Each item As ListViewItem In lvItems.Items
                 If IO.Path.GetExtension(file) = item.Text Then
-                    Dim newExtension As String = "." + item.SubItems(1).Text
+                    Dim newExtension As String = item.SubItems(1).Text
                     IO.File.Move(file, IO.Path.ChangeExtension(file, newExtension))
                 End If
             Next
