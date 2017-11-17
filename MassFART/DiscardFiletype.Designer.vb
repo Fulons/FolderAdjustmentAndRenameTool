@@ -145,6 +145,7 @@ Partial Class DiscardFiletype
         Me.Controls.Add(Me.cbSelectedFolders)
         Me.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Name = "DiscardFiletype"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Delete Filetype"
         Me.ResumeLayout(False)
         Me.PerformLayout()
