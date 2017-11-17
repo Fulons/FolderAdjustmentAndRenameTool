@@ -75,4 +75,12 @@
     Private Sub dgwFolders_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles dgwFolders.CellEndEdit
 
     End Sub
+
+    Private Sub RenameFiletypeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RenameFiletypeToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub PaseCtrlVToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PaseCtrlVToolStripMenuItem.Click
+
+    End Sub
 End Class
