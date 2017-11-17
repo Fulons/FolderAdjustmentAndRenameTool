@@ -31,6 +31,7 @@
     End Sub
 
     Private Sub DoRename()
+        Dim errorHappened As Boolean = False
         For i As Integer = 0 To dgwFolders.RowCount - 1
             'Dim oldName As String = dgwFolders.Rows(i).Cells(2).Value.ToString
             Dim newName As String = dgwFolders.Rows(i).Cells(3).Value.ToString
@@ -38,19 +39,38 @@
             If Not String.IsNullOrEmpty(newName) Then
                 Try
                     My.Computer.FileSystem.RenameDirectory(path, newName)
-                Catch ex As Exception
-                    MessageBox.Show(ex.Message, "Errod")
+                Catch ex As IO.IOException
+                    If IO.Directory.Exists(path) Then   'Path exist
+                        MessageBox.Show(ex.Message, "Error")
+                        errorHappened = True
+                    Else                                'Path does not exist
+                        If IO.Directory.Exists(path.Substring(0, path.LastIndexOf("\") + 1)) Then 'Parent folder exist
+                            MessageBox.Show(ex.Message, "Error")
+                            errorHappened = True
+                        Else                                                        'Parent folder does not exist
+                            MessageBox.Show("Parent folder deleted.")
+                            dgwFolders.Rows.Clear()
+                            Exit For
+                        End If
+                    End If
                 End Try
-                dgwFolders.Rows(i).Cells(2).Value = newName
-                dgwFolders.Rows(i).Cells(3).Value = ""
-                dgwFolders.Rows(i).Cells("FullPath").Value = path.Substring(0, path.LastIndexOf("\") + 1) + newName
+                If Not errorHappened Then
+                    dgwFolders.Rows(i).Cells(2).Value = newName
+                    dgwFolders.Rows(i).Cells(3).Value = ""
+                    dgwFolders.Rows(i).Cells("FullPath").Value = path.Substring(0, path.LastIndexOf("\") + 1) + newName
+                End If
             End If
         Next
+        If errorHappened Then
+            LoadPath(fbdFolder.SelectedPath)
+        End If
     End Sub
 
     Private Sub OpenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenToolStripMenuItem.Click
         fbdFolder.ShowDialog()
-        LoadPath(fbdFolder.SelectedPath())
+        If Not String.IsNullOrEmpty(fbdFolder.SelectedPath()) Then
+            LoadPath(fbdFolder.SelectedPath())
+        End If
     End Sub
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
