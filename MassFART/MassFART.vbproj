@@ -76,6 +76,12 @@
     <Compile Include="ccButton.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CCButton.Designer.vb">
+      <DependentUpon>CCButton.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CCButton.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DeleteFiletype.Designer.vb">
       <DependentUpon>DeleteFiletype.vb</DependentUpon>
     </Compile>
