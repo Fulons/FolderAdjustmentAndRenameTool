@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class frmDiscardFiletype
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class DiscardFiletype
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmDiscardFiletype
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.cbSelectedFolders = New System.Windows.Forms.CheckBox()
         Me.cmbExistingFileTypes2 = New System.Windows.Forms.ComboBox()
@@ -129,7 +129,7 @@ Partial Class frmDiscardFiletype
         Me.Label2.TabIndex = 18
         Me.Label2.Text = "No. of Files"
         '
-        'frmDiscardFiletype
+        'DiscardFiletype
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -144,7 +144,6 @@ Partial Class frmDiscardFiletype
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cbSelectedFolders)
         Me.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Name = "frmDiscardFiletype"
         Me.Name = "DiscardFiletype"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Delete Filetype"

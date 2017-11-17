@@ -100,6 +100,7 @@
         'Next
         'frmFiletypeChanger.Init()
         'frmFiletypeChanger.Show()
+        ccFileExtensionEditor.ResetForm()
         For Each folder In dgwFolders.SelectedRows
             ccFileExtensionEditor.AddFolder(folder.Cells("Fullpath").Value.ToString)
         Next
@@ -117,5 +118,14 @@
                 dgwFolders.Rows.Remove(folder)
             Next
         End If
+    End Sub
+
+    Private Sub dgwFolders_RowStateChanged(sender As Object, e As DataGridViewRowStateChangedEventArgs) Handles dgwFolders.RowStateChanged
+        ccFileExtensionEditor.ResetForm()
+        For Each folder In dgwFolders.SelectedRows
+            ccFileExtensionEditor.AddFolder(folder.Cells("Fullpath").Value.ToString)
+        Next
+        ccFileExtensionEditor.Init()
+        ccFileExtensionEditor.Visible = True
     End Sub
 End Class

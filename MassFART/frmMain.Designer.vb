@@ -71,7 +71,8 @@ Partial Class frmMain
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(787, 24)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
+        Me.MenuStrip1.Size = New System.Drawing.Size(914, 24)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -194,7 +195,7 @@ Partial Class frmMain
         '
         Me.FiletypeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CurrentFolderToolStripMenuItem, Me.SelectedFoldersToolStripMenuItem})
         Me.FiletypeToolStripMenuItem.Name = "FiletypeToolStripMenuItem"
-        Me.FiletypeToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.FiletypeToolStripMenuItem.Size = New System.Drawing.Size(115, 22)
         Me.FiletypeToolStripMenuItem.Text = "Filetype"
         '
         'CurrentFolderToolStripMenuItem
@@ -244,36 +245,36 @@ Partial Class frmMain
         '
         'btnCreate
         '
-        Me.btnCreate.Location = New System.Drawing.Point(14, 37)
+        Me.btnCreate.Location = New System.Drawing.Point(16, 43)
         Me.btnCreate.Name = "btnCreate"
-        Me.btnCreate.Size = New System.Drawing.Size(126, 39)
+        Me.btnCreate.Size = New System.Drawing.Size(147, 45)
         Me.btnCreate.TabIndex = 6
         Me.btnCreate.Text = "Create Folder"
         Me.btnCreate.UseVisualStyleBackColor = True
         '
         'btnDelete
         '
-        Me.btnDelete.Location = New System.Drawing.Point(14, 102)
+        Me.btnDelete.Location = New System.Drawing.Point(16, 118)
         Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(126, 39)
+        Me.btnDelete.Size = New System.Drawing.Size(147, 45)
         Me.btnDelete.TabIndex = 7
         Me.btnDelete.Text = "Delete Folder"
         Me.btnDelete.UseVisualStyleBackColor = True
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(378, 434)
+        Me.Button1.Location = New System.Drawing.Point(16, 436)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(126, 39)
+        Me.Button1.Size = New System.Drawing.Size(147, 45)
         Me.Button1.TabIndex = 9
         Me.Button1.Text = "Rename Parent Folder"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'btnRename
         '
-        Me.btnRename.Location = New System.Drawing.Point(14, 167)
+        Me.btnRename.Location = New System.Drawing.Point(16, 193)
         Me.btnRename.Name = "btnRename"
-        Me.btnRename.Size = New System.Drawing.Size(126, 39)
+        Me.btnRename.Size = New System.Drawing.Size(147, 45)
         Me.btnRename.TabIndex = 10
         Me.btnRename.Text = "Rename All"
         Me.btnRename.UseVisualStyleBackColor = True
@@ -285,9 +286,9 @@ Partial Class frmMain
         Me.dgwFolders.AllowUserToResizeRows = False
         Me.dgwFolders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgwFolders.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FullPath, Me.FolderPic, Me.OldName, Me.NewName})
-        Me.dgwFolders.Location = New System.Drawing.Point(164, 37)
+        Me.dgwFolders.Location = New System.Drawing.Point(191, 43)
         Me.dgwFolders.Name = "dgwFolders"
-        Me.dgwFolders.Size = New System.Drawing.Size(340, 380)
+        Me.dgwFolders.Size = New System.Drawing.Size(397, 438)
         Me.dgwFolders.TabIndex = 0
         '
         'FullPath
@@ -315,9 +316,9 @@ Partial Class frmMain
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(14, 378)
+        Me.Button2.Location = New System.Drawing.Point(16, 360)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(126, 39)
+        Me.Button2.Size = New System.Drawing.Size(147, 45)
         Me.Button2.TabIndex = 11
         Me.Button2.Text = "Save List as txt"
         Me.Button2.UseVisualStyleBackColor = True
@@ -325,18 +326,19 @@ Partial Class frmMain
         'ccFileExtensionEditor
         '
         Me.ccFileExtensionEditor.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.ccFileExtensionEditor.Location = New System.Drawing.Point(510, 37)
+        Me.ccFileExtensionEditor.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ccFileExtensionEditor.Location = New System.Drawing.Point(594, 41)
         Me.ccFileExtensionEditor.Name = "ccFileExtensionEditor"
-        Me.ccFileExtensionEditor.Size = New System.Drawing.Size(273, 98)
+        Me.ccFileExtensionEditor.Size = New System.Drawing.Size(328, 186)
         Me.ccFileExtensionEditor.TabIndex = 12
         Me.ccFileExtensionEditor.Visible = False
         '
         'frmMain
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ClientSize = New System.Drawing.Size(787, 487)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(914, 576)
         Me.Controls.Add(Me.ccFileExtensionEditor)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.dgwFolders)
@@ -345,6 +347,7 @@ Partial Class frmMain
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.btnCreate)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmMain"
@@ -394,5 +397,5 @@ Partial Class frmMain
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Button2 As Button
     Friend WithEvents DiscardFiletypesToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ccFileExtensionEditor As FileExtensionEditor
+    Friend WithEvents ccFileExtensionEditor As MassFART.FileExtensionEditor
 End Class
