@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class DiscardFiletype
+Partial Class frmDiscardFiletype
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -129,7 +129,7 @@ Partial Class DiscardFiletype
         Me.Label2.TabIndex = 18
         Me.Label2.Text = "No. of Files"
         '
-        'DiscardFiletype
+        'frmDiscardFiletype
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -144,7 +144,7 @@ Partial Class DiscardFiletype
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cbSelectedFolders)
         Me.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Name = "DiscardFiletype"
+        Me.Name = "frmDiscardFiletype"
         Me.Text = "Delete Filetype"
         Me.ResumeLayout(False)
         Me.PerformLayout()

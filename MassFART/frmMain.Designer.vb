@@ -44,6 +44,7 @@ Partial Class frmMain
         Me.FiletypeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CurrentFolderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SelectedFoldersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DiscardFiletypesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewHelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
@@ -59,7 +60,7 @@ Partial Class frmMain
         Me.OldName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NewName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.DiscardFiletypesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ccFileExtensionEditor = New MassFART.FileExtensionEditor()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgwFolders, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -70,7 +71,7 @@ Partial Class frmMain
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(519, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(787, 24)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -193,7 +194,7 @@ Partial Class frmMain
         '
         Me.FiletypeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CurrentFolderToolStripMenuItem, Me.SelectedFoldersToolStripMenuItem})
         Me.FiletypeToolStripMenuItem.Name = "FiletypeToolStripMenuItem"
-        Me.FiletypeToolStripMenuItem.Size = New System.Drawing.Size(115, 22)
+        Me.FiletypeToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.FiletypeToolStripMenuItem.Text = "Filetype"
         '
         'CurrentFolderToolStripMenuItem
@@ -209,6 +210,13 @@ Partial Class frmMain
         Me.SelectedFoldersToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F6
         Me.SelectedFoldersToolStripMenuItem.Size = New System.Drawing.Size(178, 22)
         Me.SelectedFoldersToolStripMenuItem.Text = "Selected Folders"
+        '
+        'DiscardFiletypesToolStripMenuItem
+        '
+        Me.DiscardFiletypesToolStripMenuItem.Name = "DiscardFiletypesToolStripMenuItem"
+        Me.DiscardFiletypesToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F7
+        Me.DiscardFiletypesToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
+        Me.DiscardFiletypesToolStripMenuItem.Text = "Delete Filetype"
         '
         'HelpToolStripMenuItem
         '
@@ -314,19 +322,22 @@ Partial Class frmMain
         Me.Button2.Text = "Save List as txt"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'DiscardFiletypesToolStripMenuItem
+        'ccFileExtensionEditor
         '
-        Me.DiscardFiletypesToolStripMenuItem.Name = "DiscardFiletypesToolStripMenuItem"
-        Me.DiscardFiletypesToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F7
-        Me.DiscardFiletypesToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
-        Me.DiscardFiletypesToolStripMenuItem.Text = "Delete Filetype"
+        Me.ccFileExtensionEditor.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.ccFileExtensionEditor.Location = New System.Drawing.Point(510, 37)
+        Me.ccFileExtensionEditor.Name = "ccFileExtensionEditor"
+        Me.ccFileExtensionEditor.Size = New System.Drawing.Size(273, 98)
+        Me.ccFileExtensionEditor.TabIndex = 12
+        Me.ccFileExtensionEditor.Visible = False
         '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ClientSize = New System.Drawing.Size(519, 487)
+        Me.ClientSize = New System.Drawing.Size(787, 487)
+        Me.Controls.Add(Me.ccFileExtensionEditor)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.dgwFolders)
         Me.Controls.Add(Me.btnRename)
@@ -383,4 +394,5 @@ Partial Class frmMain
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Button2 As Button
     Friend WithEvents DiscardFiletypesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ccFileExtensionEditor As FileExtensionEditor
 End Class

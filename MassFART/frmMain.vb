@@ -95,11 +95,16 @@
     End Sub
 
     Private Sub SelectedFoldersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectedFoldersToolStripMenuItem.Click, CurrentFolderToolStripMenuItem.Click
+        'For Each folder In dgwFolders.SelectedRows
+        '    frmFiletypeChanger.AddFolder(folder.Cells("Fullpath").Value.ToString)
+        'Next
+        'frmFiletypeChanger.Init()
+        'frmFiletypeChanger.Show()
         For Each folder In dgwFolders.SelectedRows
-            frmFiletypeChanger.AddFolder(folder.Cells("Fullpath").Value.ToString)
+            ccFileExtensionEditor.AddFolder(folder.Cells("Fullpath").Value.ToString)
         Next
-        frmFiletypeChanger.Init()
-        frmFiletypeChanger.Show()
+        ccFileExtensionEditor.Init()
+        ccFileExtensionEditor.Visible = True
     End Sub
 
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
