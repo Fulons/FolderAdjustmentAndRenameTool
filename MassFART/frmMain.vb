@@ -102,7 +102,15 @@
         frmFiletypeChanger.Show()
     End Sub
 
-    Private Sub DiscardFiletypesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DiscardFiletypesToolStripMenuItem.Click
-
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+        If dgwFolders.SelectedRows.Count = 0 Then Return
+        If MessageBox.Show("Are you sure you want to delete the " +
+                        dgwFolders.SelectedRows.Count.ToString() +
+                        " selected folders?", "Confirmation", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+            For Each folder In dgwFolders.SelectedRows
+                IO.Directory.Delete(folder.Cells("Fullpath").Value.ToString, True)
+                dgwFolders.Rows.Remove(folder)
+            Next
+        End If
     End Sub
 End Class
