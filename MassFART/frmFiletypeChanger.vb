@@ -3,6 +3,14 @@
     Private folderList As New List(Of String)
     Private filetypeList As New List(Of String)
 
+    Public Sub ResetForm()
+        folderList.Clear()
+        filetypeList.Clear()
+        cmbExistingFileTypes.Items.Clear()
+        txtReplacement.Text = ""
+        lvItems.Items.Clear()
+    End Sub
+
     Public Sub AddFolder(path As String)
         folderList.Add(path)
     End Sub
@@ -32,8 +40,12 @@
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         Dim lvItem As ListViewItem
+        Dim replacement As String = txtReplacement.Text
+        If replacement(0) <> "." Then
+            replacement = "." + replacement
+        End If
         lvItem = lvItems.Items.Add(cmbExistingFileTypes.Text)
-        lvItem.SubItems.Add(txtReplacement.Text)
+        lvItem.SubItems.Add(replacement)
     End Sub
 
     Private Sub RecursiveRename(path As String)
@@ -41,15 +53,17 @@
         For Each file In subFiles
             For Each item As ListViewItem In lvItems.Items
                 If IO.Path.GetExtension(file) = item.Text Then
-                    Dim newExtension As String = "." + item.SubItems(1).Text
+                    Dim newExtension As String = item.SubItems(1).Text
                     IO.File.Move(file, IO.Path.ChangeExtension(file, newExtension))
                 End If
             Next
         Next
-        Dim subFolders() As String = IO.Directory.GetDirectories(path)
-        For Each folder In subFolders
-            RecursiveRename(folder)
-        Next
+        If cbSubfolders.Checked Then
+            Dim subFolders() As String = IO.Directory.GetDirectories(path)
+            For Each folder In subFolders
+                RecursiveRename(folder)
+            Next
+        End If
     End Sub
 
     Private Sub btnRename_Click(sender As Object, e As EventArgs) Handles btnRename.Click
@@ -58,13 +72,11 @@
         Next
     End Sub
 
-
-    Private Sub txtReplacement_TextChanged(sender As Object, e As EventArgs) Handles txtReplacement.TextChanged
-
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Me.Close()
     End Sub
 
-    Private Sub cbSubfolders_CheckedChanged(sender As Object, e As EventArgs)
-
+    Private Sub frmFiletypeChanger_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        ResetForm()
     End Sub
-
 End Class
