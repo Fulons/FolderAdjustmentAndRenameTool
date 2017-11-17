@@ -3,6 +3,14 @@
     Private folderList As New List(Of String)
     Private filetypeList As New List(Of String)
 
+    Public Sub ResetForm()
+        folderList.Clear()
+        filetypeList.Clear()
+        cmbExistingFileTypes.Items.Clear()
+        txtReplacement.Text = ""
+        lvItems.Items.Clear()
+    End Sub
+
     Public Sub AddFolder(path As String)
         folderList.Add(path)
     End Sub
@@ -50,15 +58,25 @@
                 End If
             Next
         Next
-        Dim subFolders() As String = IO.Directory.GetDirectories(path)
-        For Each folder In subFolders
-            RecursiveRename(folder)
-        Next
+        If cbSubfolders.Checked Then
+            Dim subFolders() As String = IO.Directory.GetDirectories(path)
+            For Each folder In subFolders
+                RecursiveRename(folder)
+            Next
+        End If
     End Sub
 
     Private Sub btnRename_Click(sender As Object, e As EventArgs) Handles btnRename.Click
         For Each folder As String In folderList
             RecursiveRename(folder)
         Next
+    End Sub
+
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Me.Close()
+    End Sub
+
+    Private Sub frmFiletypeChanger_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        ResetForm()
     End Sub
 End Class
