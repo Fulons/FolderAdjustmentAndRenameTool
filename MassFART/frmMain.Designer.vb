@@ -44,6 +44,7 @@ Partial Class frmMain
         Me.FiletypeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CurrentFolderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SelectedFoldersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FileDeletionUtilityToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewHelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
@@ -54,19 +55,20 @@ Partial Class frmMain
         Me.FolderPic = New System.Windows.Forms.DataGridViewImageColumn()
         Me.OldName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NewName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.pnlUCHeader = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.DeleteFiletype1 = New MassFART.DeleteFiletype()
+        Me.btnCloseFileDeletion = New MassFART.ccButton()
+        Me.btnCloseFileExtensionEditor = New MassFART.ccButton()
+        Me.ccFileDeletion = New MassFART.DeleteFiletype()
         Me.ccFileExtensionEditor = New MassFART.FileExtensionEditor()
         Me.Button2 = New MassFART.ccButton()
         Me.btnRename = New MassFART.ccButton()
         Me.Button1 = New MassFART.ccButton()
         Me.btnDelete = New MassFART.ccButton()
         Me.btnCreate = New MassFART.ccButton()
-        Me.FileDeletionUtilityToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgwFolders, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
+        Me.pnlUCHeader.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -78,7 +80,7 @@ Partial Class frmMain
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
         Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.MenuStrip1.Size = New System.Drawing.Size(868, 23)
+        Me.MenuStrip1.Size = New System.Drawing.Size(865, 23)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -219,7 +221,7 @@ Partial Class frmMain
         '
         Me.FiletypeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CurrentFolderToolStripMenuItem, Me.SelectedFoldersToolStripMenuItem})
         Me.FiletypeToolStripMenuItem.Name = "FiletypeToolStripMenuItem"
-        Me.FiletypeToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.FiletypeToolStripMenuItem.Size = New System.Drawing.Size(115, 22)
         Me.FiletypeToolStripMenuItem.Text = "Filetype"
         '
         'CurrentFolderToolStripMenuItem
@@ -236,6 +238,14 @@ Partial Class frmMain
         Me.SelectedFoldersToolStripMenuItem.Size = New System.Drawing.Size(178, 22)
         Me.SelectedFoldersToolStripMenuItem.Text = "Selected Folders"
         '
+        'FileDeletionUtilityToolStripMenuItem
+        '
+        Me.FileDeletionUtilityToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.FileDeletionUtilityToolStripMenuItem.Name = "FileDeletionUtilityToolStripMenuItem"
+        Me.FileDeletionUtilityToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.F6), System.Windows.Forms.Keys)
+        Me.FileDeletionUtilityToolStripMenuItem.Size = New System.Drawing.Size(237, 22)
+        Me.FileDeletionUtilityToolStripMenuItem.Text = "File Deletion Utility"
+        '
         'HelpToolStripMenuItem
         '
         Me.HelpToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(246, Byte), Integer))
@@ -249,19 +259,19 @@ Partial Class frmMain
         '
         Me.ViewHelpToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ViewHelpToolStripMenuItem.Name = "ViewHelpToolStripMenuItem"
-        Me.ViewHelpToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ViewHelpToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
         Me.ViewHelpToolStripMenuItem.Text = "View Help"
         '
         'ToolStripSeparator5
         '
         Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(124, 6)
         '
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
         Me.AboutToolStripMenuItem.Text = "About"
         '
         'dgwFolders
@@ -269,13 +279,16 @@ Partial Class frmMain
         Me.dgwFolders.AllowUserToAddRows = False
         Me.dgwFolders.AllowUserToDeleteRows = False
         Me.dgwFolders.AllowUserToResizeRows = False
+        Me.dgwFolders.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgwFolders.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer))
         Me.dgwFolders.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgwFolders.ColumnHeadersHeight = 26
         Me.dgwFolders.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FullPath, Me.FolderPic, Me.OldName, Me.NewName})
         Me.dgwFolders.Location = New System.Drawing.Point(141, 41)
         Me.dgwFolders.Name = "dgwFolders"
-        Me.dgwFolders.Size = New System.Drawing.Size(397, 545)
+        Me.dgwFolders.Size = New System.Drawing.Size(394, 506)
         Me.dgwFolders.TabIndex = 0
         '
         'FullPath
@@ -301,15 +314,16 @@ Partial Class frmMain
         Me.NewName.HeaderText = "New"
         Me.NewName.Name = "NewName"
         '
-        'Panel1
+        'pnlUCHeader
         '
-        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(549, 42)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(307, 30)
-        Me.Panel1.TabIndex = 14
+        Me.pnlUCHeader.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pnlUCHeader.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.pnlUCHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pnlUCHeader.Controls.Add(Me.Label1)
+        Me.pnlUCHeader.Location = New System.Drawing.Point(546, 42)
+        Me.pnlUCHeader.Name = "pnlUCHeader"
+        Me.pnlUCHeader.Size = New System.Drawing.Size(307, 30)
+        Me.pnlUCHeader.TabIndex = 14
         '
         'Label1
         '
@@ -321,20 +335,49 @@ Partial Class frmMain
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "User Controls"
         '
-        'DeleteFiletype1
+        'btnCloseFileDeletion
         '
-        Me.DeleteFiletype1.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.DeleteFiletype1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DeleteFiletype1.Location = New System.Drawing.Point(546, 292)
-        Me.DeleteFiletype1.Name = "DeleteFiletype1"
-        Me.DeleteFiletype1.Size = New System.Drawing.Size(313, 204)
-        Me.DeleteFiletype1.TabIndex = 13
+        Me.btnCloseFileDeletion.borderColor = System.Drawing.Color.White
+        Me.btnCloseFileDeletion.disabledBackColor = System.Drawing.Color.Empty
+        Me.btnCloseFileDeletion.disabledBorderColor = System.Drawing.Color.Empty
+        Me.btnCloseFileDeletion.disabledForeColor = System.Drawing.Color.Empty
+        Me.btnCloseFileDeletion.Location = New System.Drawing.Point(830, 301)
+        Me.btnCloseFileDeletion.Name = "btnCloseFileDeletion"
+        Me.btnCloseFileDeletion.Size = New System.Drawing.Size(17, 18)
+        Me.btnCloseFileDeletion.TabIndex = 16
+        Me.btnCloseFileDeletion.Text = "X"
+        Me.btnCloseFileDeletion.UseVisualStyleBackColor = True
+        '
+        'btnCloseFileExtensionEditor
+        '
+        Me.btnCloseFileExtensionEditor.borderColor = System.Drawing.Color.White
+        Me.btnCloseFileExtensionEditor.disabledBackColor = System.Drawing.Color.Empty
+        Me.btnCloseFileExtensionEditor.disabledBorderColor = System.Drawing.Color.Empty
+        Me.btnCloseFileExtensionEditor.disabledForeColor = System.Drawing.Color.Empty
+        Me.btnCloseFileExtensionEditor.Location = New System.Drawing.Point(830, 90)
+        Me.btnCloseFileExtensionEditor.Name = "btnCloseFileExtensionEditor"
+        Me.btnCloseFileExtensionEditor.Size = New System.Drawing.Size(17, 18)
+        Me.btnCloseFileExtensionEditor.TabIndex = 15
+        Me.btnCloseFileExtensionEditor.Text = "X"
+        Me.btnCloseFileExtensionEditor.UseVisualStyleBackColor = True
+        '
+        'ccFileDeletion
+        '
+        Me.ccFileDeletion.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ccFileDeletion.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.ccFileDeletion.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ccFileDeletion.Location = New System.Drawing.Point(543, 81)
+        Me.ccFileDeletion.Name = "ccFileDeletion"
+        Me.ccFileDeletion.Size = New System.Drawing.Size(313, 204)
+        Me.ccFileDeletion.TabIndex = 13
+        Me.ccFileDeletion.Visible = False
         '
         'ccFileExtensionEditor
         '
+        Me.ccFileExtensionEditor.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ccFileExtensionEditor.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
         Me.ccFileExtensionEditor.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ccFileExtensionEditor.Location = New System.Drawing.Point(546, 81)
+        Me.ccFileExtensionEditor.Location = New System.Drawing.Point(543, 81)
         Me.ccFileExtensionEditor.Name = "ccFileExtensionEditor"
         Me.ccFileExtensionEditor.Size = New System.Drawing.Size(313, 204)
         Me.ccFileExtensionEditor.TabIndex = 12
@@ -342,15 +385,17 @@ Partial Class frmMain
         '
         'Button2
         '
+        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(55, Byte), Integer))
         Me.Button2.borderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
         Me.Button2.disabledBackColor = System.Drawing.Color.Empty
         Me.Button2.disabledBorderColor = System.Drawing.Color.Empty
         Me.Button2.disabledForeColor = System.Drawing.Color.Empty
+        Me.Button2.Enabled = False
         Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.ForeColor = System.Drawing.Color.DarkGray
-        Me.Button2.Location = New System.Drawing.Point(18, 559)
+        Me.Button2.Location = New System.Drawing.Point(18, 520)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(105, 27)
         Me.Button2.TabIndex = 11
@@ -425,22 +470,16 @@ Partial Class frmMain
         Me.btnCreate.Text = "Create Folder"
         Me.btnCreate.UseVisualStyleBackColor = False
         '
-        'FileDeletionUtilityToolStripMenuItem
-        '
-        Me.FileDeletionUtilityToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.FileDeletionUtilityToolStripMenuItem.Name = "FileDeletionUtilityToolStripMenuItem"
-        Me.FileDeletionUtilityToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.F6), System.Windows.Forms.Keys)
-        Me.FileDeletionUtilityToolStripMenuItem.Size = New System.Drawing.Size(237, 22)
-        Me.FileDeletionUtilityToolStripMenuItem.Text = "File Deletion Utility"
-        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(868, 601)
-        Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.DeleteFiletype1)
+        Me.ClientSize = New System.Drawing.Size(865, 562)
+        Me.Controls.Add(Me.btnCloseFileDeletion)
+        Me.Controls.Add(Me.btnCloseFileExtensionEditor)
+        Me.Controls.Add(Me.pnlUCHeader)
+        Me.Controls.Add(Me.ccFileDeletion)
         Me.Controls.Add(Me.ccFileExtensionEditor)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.dgwFolders)
@@ -457,8 +496,8 @@ Partial Class frmMain
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         CType(Me.dgwFolders, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
+        Me.pnlUCHeader.ResumeLayout(False)
+        Me.pnlUCHeader.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -495,8 +534,8 @@ Partial Class frmMain
     Friend WithEvents ToolStripSeparator6 As ToolStripSeparator
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ccFileExtensionEditor As MassFART.FileExtensionEditor
-    Friend WithEvents DeleteFiletype1 As DeleteFiletype
-    Friend WithEvents Panel1 As Panel
+    Friend WithEvents ccFileDeletion As DeleteFiletype
+    Friend WithEvents pnlUCHeader As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents btnCreate As ccButton
@@ -505,4 +544,6 @@ Partial Class frmMain
     Friend WithEvents btnRename As ccButton
     Friend WithEvents Button2 As ccButton
     Friend WithEvents FileDeletionUtilityToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents btnCloseFileExtensionEditor As ccButton
+    Friend WithEvents btnCloseFileDeletion As ccButton
 End Class

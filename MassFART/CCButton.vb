@@ -6,9 +6,9 @@
     Public Property disabledBackColor As Color
 
     Protected Overrides Sub OnPaint(ByVal e As System.Windows.Forms.PaintEventArgs)
-        Dim backC As Color = Color.Red
-        Dim foreC As Color = Color.Red
-        Dim borderC As Color = Color.Red
+        Dim backC As Color
+        Dim foreC As Color
+        Dim borderC As Color
         If Me.Enabled Then
             backC = BackColor
             foreC = ForeColor
