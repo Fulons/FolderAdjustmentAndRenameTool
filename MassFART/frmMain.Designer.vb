@@ -65,7 +65,7 @@ Partial Class frmMain
         Me.Button1 = New MassFART.ccButton()
         Me.btnDelete = New MassFART.ccButton()
         Me.btnCreate = New MassFART.ccButton()
-        Me.CcButton1 = New MassFART.ccButton()
+        Me.btnCloseFileDeletion = New MassFART.ccButton()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgwFolders, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlUCHeader.SuspendLayout()
@@ -461,21 +461,21 @@ Partial Class frmMain
         Me.btnCreate.Text = "Create Folder"
         Me.btnCreate.UseVisualStyleBackColor = False
         '
-        'CcButton1
+        'btnCloseFileDeletion
         '
-        Me.CcButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(55, Byte), Integer))
-        Me.CcButton1.borderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
-        Me.CcButton1.disabledBackColor = System.Drawing.Color.Empty
-        Me.CcButton1.disabledBorderColor = System.Drawing.Color.Empty
-        Me.CcButton1.disabledForeColor = System.Drawing.Color.Empty
-        Me.CcButton1.Font = New System.Drawing.Font("Segoe UI", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CcButton1.ForeColor = System.Drawing.Color.DarkGray
-        Me.CcButton1.Location = New System.Drawing.Point(820, 297)
-        Me.CcButton1.Name = "CcButton1"
-        Me.CcButton1.Size = New System.Drawing.Size(30, 14)
-        Me.CcButton1.TabIndex = 17
-        Me.CcButton1.Text = "X"
-        Me.CcButton1.UseVisualStyleBackColor = False
+        Me.btnCloseFileDeletion.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.btnCloseFileDeletion.borderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
+        Me.btnCloseFileDeletion.disabledBackColor = System.Drawing.Color.Empty
+        Me.btnCloseFileDeletion.disabledBorderColor = System.Drawing.Color.Empty
+        Me.btnCloseFileDeletion.disabledForeColor = System.Drawing.Color.Empty
+        Me.btnCloseFileDeletion.Font = New System.Drawing.Font("Segoe UI", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCloseFileDeletion.ForeColor = System.Drawing.Color.DarkGray
+        Me.btnCloseFileDeletion.Location = New System.Drawing.Point(820, 297)
+        Me.btnCloseFileDeletion.Name = "btnCloseFileDeletion"
+        Me.btnCloseFileDeletion.Size = New System.Drawing.Size(30, 14)
+        Me.btnCloseFileDeletion.TabIndex = 17
+        Me.btnCloseFileDeletion.Text = "X"
+        Me.btnCloseFileDeletion.UseVisualStyleBackColor = False
         '
         'frmMain
         '
@@ -483,7 +483,7 @@ Partial Class frmMain
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(865, 562)
-        Me.Controls.Add(Me.CcButton1)
+        Me.Controls.Add(Me.btnCloseFileDeletion)
         Me.Controls.Add(Me.btnCloseFileExtensionEditor)
         Me.Controls.Add(Me.pnlUCHeader)
         Me.Controls.Add(Me.ccFileDeletion)
@@ -552,5 +552,5 @@ Partial Class frmMain
     Friend WithEvents FolderPic As DataGridViewImageColumn
     Friend WithEvents OldName As DataGridViewTextBoxColumn
     Friend WithEvents NewName As DataGridViewTextBoxColumn
-    Friend WithEvents CcButton1 As ccButton
+    Friend WithEvents btnCloseFileDeletion As ccButton
 End Class

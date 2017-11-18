@@ -170,26 +170,22 @@
         OpenFileDeletion()
     End Sub
 
-    Private Sub btnCloseFileExtensionEditor_Click(sender As Object, e As EventArgs) Handles btnCloseFileExtensionEditor.Click
-        ccFileDeletion.Location = New Point(ccFileDeletion.Location.X, 81)
-        ccFileExtensionEditor.Visible = False
-        DisplayedControlsChanged()
-    End Sub
 
-    Private Sub btnCloseFileDeletion_Click(sender As Object, e As EventArgs)
-        ccFileExtensionEditor.Location = New Point(ccFileExtensionEditor.Location.X, 81)
-        ccFileDeletion.Visible = False
-        DisplayedControlsChanged()
-    End Sub
+
 
     Private Sub OpenFileDeletion()
         If ccFileExtensionEditor.Visible Then
             ccFileDeletion.Location = New Point(ccFileDeletion.Location.X,
                                                 ccFileExtensionEditor.Location.Y +
                                                 ccFileExtensionEditor.Size.Height + 6)
+            btnCloseFileDeletion.Location = New Point(btnCloseFileDeletion.Location.X,
+                                                ccFileExtensionEditor.Location.Y +
+                                                ccFileExtensionEditor.Size.Height + 6)
             ccFileExtensionEditor.Location = New Point(ccFileExtensionEditor.Location.X, 81)
+            btnCloseFileExtensionEditor.Location = New Point(btnCloseFileExtensionEditor.Location.X, 81)
         Else
             ccFileDeletion.Location = New Point(ccFileDeletion.Location.X, 81)
+            btnCloseFileDeletion.Location = New Point(btnCloseFileDeletion.Location.X, 81)
         End If
 
         ccFileDeletion.ResetForm()
@@ -206,9 +202,14 @@
             ccFileExtensionEditor.Location = New Point(ccFileExtensionEditor.Location.X,
                                                        ccFileDeletion.Location.Y +
                                                        ccFileDeletion.Size.Height + 6)
+            btnCloseFileExtensionEditor.Location = New Point(btnCloseFileExtensionEditor.Location.X,
+                                                             ccFileDeletion.Location.Y +
+                                                             ccFileDeletion.Size.Height + 6)
             ccFileDeletion.Location = New Point(ccFileDeletion.Location.X, 81)
+            btnCloseFileDeletion.Location = New Point(btnCloseFileDeletion.Location.X, 81)
         Else
             ccFileExtensionEditor.Location = New Point(ccFileExtensionEditor.Location.X, 81)
+            btnCloseFileExtensionEditor.Location = New Point(btnCloseFileExtensionEditor.Location.X, 81)
         End If
         ccFileExtensionEditor.ResetForm()
         For Each folder In dgwFolders.SelectedRows
@@ -219,9 +220,17 @@
         DisplayedControlsChanged()
     End Sub
 
-    Private Sub CcButton1_Click(sender As Object, e As EventArgs) Handles CcButton1.Click
+    Private Sub CcButton1_Click(sender As Object, e As EventArgs) Handles btnCloseFileDeletion.Click
         ccFileExtensionEditor.Location = New Point(ccFileExtensionEditor.Location.X, 81)
+        btnCloseFileExtensionEditor.Location = New Point(btnCloseFileExtensionEditor.Location.X, 81)
         ccFileDeletion.Visible = False
+        DisplayedControlsChanged()
+    End Sub
+
+    Private Sub btnCloseFileExtensionEditor_Click(sender As Object, e As EventArgs) Handles btnCloseFileExtensionEditor.Click
+        ccFileDeletion.Location = New Point(ccFileDeletion.Location.X, 81)
+        btnCloseFileDeletion.Location = New Point(btnCloseFileDeletion.Location.X, 81)
+        ccFileExtensionEditor.Visible = False
         DisplayedControlsChanged()
     End Sub
 End Class
