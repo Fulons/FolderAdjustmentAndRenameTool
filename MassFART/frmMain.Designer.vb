@@ -51,9 +51,12 @@ Partial Class frmMain
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.fbdFolder = New System.Windows.Forms.FolderBrowserDialog()
         Me.dgwFolders = New System.Windows.Forms.DataGridView()
+        Me.FullPath = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FolderPic = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.OldName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NewName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.pnlUCHeader = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnCloseFileDeletion = New MassFART.ccButton()
         Me.btnCloseFileExtensionEditor = New MassFART.ccButton()
         Me.ccFileDeletion = New MassFART.DeleteFiletype()
         Me.ccFileExtensionEditor = New MassFART.FileExtensionEditor()
@@ -62,10 +65,7 @@ Partial Class frmMain
         Me.Button1 = New MassFART.ccButton()
         Me.btnDelete = New MassFART.ccButton()
         Me.btnCreate = New MassFART.ccButton()
-        Me.FullPath = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FolderPic = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.OldName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NewName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CcButton1 = New MassFART.ccButton()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgwFolders, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlUCHeader.SuspendLayout()
@@ -291,6 +291,30 @@ Partial Class frmMain
         Me.dgwFolders.Size = New System.Drawing.Size(394, 506)
         Me.dgwFolders.TabIndex = 0
         '
+        'FullPath
+        '
+        Me.FullPath.HeaderText = ""
+        Me.FullPath.Name = "FullPath"
+        Me.FullPath.Visible = False
+        '
+        'FolderPic
+        '
+        Me.FolderPic.HeaderText = "O"
+        Me.FolderPic.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
+        Me.FolderPic.Name = "FolderPic"
+        Me.FolderPic.Width = 20
+        '
+        'OldName
+        '
+        Me.OldName.HeaderText = "Old"
+        Me.OldName.Name = "OldName"
+        Me.OldName.ReadOnly = True
+        '
+        'NewName
+        '
+        Me.NewName.HeaderText = "New"
+        Me.NewName.Name = "NewName"
+        '
         'pnlUCHeader
         '
         Me.pnlUCHeader.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -312,38 +336,28 @@ Partial Class frmMain
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "User Controls"
         '
-        'btnCloseFileDeletion
-        '
-        Me.btnCloseFileDeletion.borderColor = System.Drawing.Color.White
-        Me.btnCloseFileDeletion.disabledBackColor = System.Drawing.Color.Empty
-        Me.btnCloseFileDeletion.disabledBorderColor = System.Drawing.Color.Empty
-        Me.btnCloseFileDeletion.disabledForeColor = System.Drawing.Color.Empty
-        Me.btnCloseFileDeletion.Location = New System.Drawing.Point(830, 301)
-        Me.btnCloseFileDeletion.Name = "btnCloseFileDeletion"
-        Me.btnCloseFileDeletion.Size = New System.Drawing.Size(17, 18)
-        Me.btnCloseFileDeletion.TabIndex = 16
-        Me.btnCloseFileDeletion.Text = "X"
-        Me.btnCloseFileDeletion.UseVisualStyleBackColor = True
-        '
         'btnCloseFileExtensionEditor
         '
-        Me.btnCloseFileExtensionEditor.borderColor = System.Drawing.Color.White
+        Me.btnCloseFileExtensionEditor.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.btnCloseFileExtensionEditor.borderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
         Me.btnCloseFileExtensionEditor.disabledBackColor = System.Drawing.Color.Empty
         Me.btnCloseFileExtensionEditor.disabledBorderColor = System.Drawing.Color.Empty
         Me.btnCloseFileExtensionEditor.disabledForeColor = System.Drawing.Color.Empty
-        Me.btnCloseFileExtensionEditor.Location = New System.Drawing.Point(830, 90)
+        Me.btnCloseFileExtensionEditor.Font = New System.Drawing.Font("Segoe UI", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCloseFileExtensionEditor.ForeColor = System.Drawing.Color.DarkGray
+        Me.btnCloseFileExtensionEditor.Location = New System.Drawing.Point(820, 87)
         Me.btnCloseFileExtensionEditor.Name = "btnCloseFileExtensionEditor"
-        Me.btnCloseFileExtensionEditor.Size = New System.Drawing.Size(17, 18)
+        Me.btnCloseFileExtensionEditor.Size = New System.Drawing.Size(30, 14)
         Me.btnCloseFileExtensionEditor.TabIndex = 15
         Me.btnCloseFileExtensionEditor.Text = "X"
-        Me.btnCloseFileExtensionEditor.UseVisualStyleBackColor = True
+        Me.btnCloseFileExtensionEditor.UseVisualStyleBackColor = False
         '
         'ccFileDeletion
         '
         Me.ccFileDeletion.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ccFileDeletion.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
         Me.ccFileDeletion.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ccFileDeletion.Location = New System.Drawing.Point(543, 81)
+        Me.ccFileDeletion.Location = New System.Drawing.Point(543, 291)
         Me.ccFileDeletion.Name = "ccFileDeletion"
         Me.ccFileDeletion.Size = New System.Drawing.Size(313, 204)
         Me.ccFileDeletion.TabIndex = 13
@@ -447,29 +461,21 @@ Partial Class frmMain
         Me.btnCreate.Text = "Create Folder"
         Me.btnCreate.UseVisualStyleBackColor = False
         '
-        'FullPath
+        'CcButton1
         '
-        Me.FullPath.HeaderText = ""
-        Me.FullPath.Name = "FullPath"
-        Me.FullPath.Visible = False
-        '
-        'FolderPic
-        '
-        Me.FolderPic.HeaderText = "O"
-        Me.FolderPic.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
-        Me.FolderPic.Name = "FolderPic"
-        Me.FolderPic.Width = 20
-        '
-        'OldName
-        '
-        Me.OldName.HeaderText = "Old"
-        Me.OldName.Name = "OldName"
-        Me.OldName.ReadOnly = True
-        '
-        'NewName
-        '
-        Me.NewName.HeaderText = "New"
-        Me.NewName.Name = "NewName"
+        Me.CcButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.CcButton1.borderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
+        Me.CcButton1.disabledBackColor = System.Drawing.Color.Empty
+        Me.CcButton1.disabledBorderColor = System.Drawing.Color.Empty
+        Me.CcButton1.disabledForeColor = System.Drawing.Color.Empty
+        Me.CcButton1.Font = New System.Drawing.Font("Segoe UI", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CcButton1.ForeColor = System.Drawing.Color.DarkGray
+        Me.CcButton1.Location = New System.Drawing.Point(820, 297)
+        Me.CcButton1.Name = "CcButton1"
+        Me.CcButton1.Size = New System.Drawing.Size(30, 14)
+        Me.CcButton1.TabIndex = 17
+        Me.CcButton1.Text = "X"
+        Me.CcButton1.UseVisualStyleBackColor = False
         '
         'frmMain
         '
@@ -477,7 +483,7 @@ Partial Class frmMain
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(865, 562)
-        Me.Controls.Add(Me.btnCloseFileDeletion)
+        Me.Controls.Add(Me.CcButton1)
         Me.Controls.Add(Me.btnCloseFileExtensionEditor)
         Me.Controls.Add(Me.pnlUCHeader)
         Me.Controls.Add(Me.ccFileDeletion)
@@ -542,9 +548,9 @@ Partial Class frmMain
     Friend WithEvents Button2 As ccButton
     Friend WithEvents FileDeletionUtilityToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents btnCloseFileExtensionEditor As ccButton
-    Friend WithEvents btnCloseFileDeletion As ccButton
     Friend WithEvents FullPath As DataGridViewTextBoxColumn
     Friend WithEvents FolderPic As DataGridViewImageColumn
     Friend WithEvents OldName As DataGridViewTextBoxColumn
     Friend WithEvents NewName As DataGridViewTextBoxColumn
+    Friend WithEvents CcButton1 As ccButton
 End Class

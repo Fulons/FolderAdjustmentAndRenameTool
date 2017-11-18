@@ -176,7 +176,7 @@
         DisplayedControlsChanged()
     End Sub
 
-    Private Sub btnCloseFileDeletion_Click(sender As Object, e As EventArgs) Handles btnCloseFileDeletion.Click
+    Private Sub btnCloseFileDeletion_Click(sender As Object, e As EventArgs)
         ccFileExtensionEditor.Location = New Point(ccFileExtensionEditor.Location.X, 81)
         ccFileDeletion.Visible = False
         DisplayedControlsChanged()
@@ -216,6 +216,12 @@
         Next
         ccFileExtensionEditor.Init()
         ccFileExtensionEditor.Visible = True
+        DisplayedControlsChanged()
+    End Sub
+
+    Private Sub CcButton1_Click(sender As Object, e As EventArgs) Handles CcButton1.Click
+        ccFileExtensionEditor.Location = New Point(ccFileExtensionEditor.Location.X, 81)
+        ccFileDeletion.Visible = False
         DisplayedControlsChanged()
     End Sub
 End Class
