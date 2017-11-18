@@ -120,7 +120,7 @@
     End Sub
 
     Private Sub btnRename_Click(sender As Object, e As EventArgs) Handles btnRename.Click
-        If MessageBox.Show("ARE YOU SURE???", "Confirmation", Windows.Forms.MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
+        If MessageBox.Show("The currently selected folder(s) will be renamed. Do you want to continue?", "Rename Folder(s)", Windows.Forms.MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
             DoRename()
         End If
     End Sub
@@ -142,9 +142,9 @@
 
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
         If dgwFolders.SelectedRows.Count = 0 Then Return
-        If MessageBox.Show("Are you sure you want to delete the " +
+        If MessageBox.Show("The selected folders (" +
                         dgwFolders.SelectedRows.Count.ToString() +
-                        " selected folders?", "Confirmation", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+                        ") will be deleted. Do you want to continue?", "Delete Folder(s)", MessageBoxButtons.YesNo) = DialogResult.Yes Then
             For Each folder In dgwFolders.SelectedRows
                 IO.Directory.Delete(folder.Cells("Fullpath").Value.ToString, True)
                 dgwFolders.Rows.Remove(folder)
@@ -223,6 +223,16 @@
         ccFileExtensionEditor.Location = New Point(ccFileExtensionEditor.Location.X, 81)
         ccFileDeletion.Visible = False
         DisplayedControlsChanged()
+    End Sub
+
+    Private Sub CcButton2_Click(sender As Object, e As EventArgs) Handles CcButton2.Click
+        ccFileExtensionEditor.Location = New Point(ccFileExtensionEditor.Location.X, 81)
+        ccFileDeletion.Visible = False
+        DisplayedControlsChanged()
+    End Sub
+
+    Private Sub ccFileDeletion_Load(sender As Object, e As EventArgs) Handles ccFileDeletion.Load
+
     End Sub
 End Class
 '81-292
