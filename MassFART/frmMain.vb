@@ -3,6 +3,7 @@
     Private folderPopulatedImage As Image
     Private folderSubFoldersImage As Image
     Private folderMixImage As Image
+    Private folderUnaccesible As Image
 
     Private resourcePath As String
 
@@ -33,8 +34,14 @@
         Dim dirs() As String = IO.Directory.GetDirectories(path)
         folderCount += dirs.Count()
         For Each dir As String In dirs
-            Dim subFiles() As String = IO.Directory.GetFiles(dir)
             Dim pos As Integer = dir.LastIndexOf("\") + 1
+            Dim subFiles() As String
+            Try
+                subFiles = IO.Directory.GetFiles(dir)
+            Catch ex As Exception
+                dgwFolders.Rows.Add(dir, folderUnaccesible, dir.Substring(pos, dir.Length - pos), "")
+                Continue For
+            End Try
             If subFiles.Count = 0 Then
                 Dim subFolders() As String = IO.Directory.GetDirectories(dir)
                 If subFolders.Count = 0 Then
@@ -101,10 +108,15 @@
 
         fbdFolder.SelectedPath = resourcePath
 
-        folderEmptyImage = Image.FromFile(resourcePath + "emp_fol.bmp")
-        folderMixImage = Image.FromFile(resourcePath + "mix_fol.bmp")
-        folderPopulatedImage = Image.FromFile(resourcePath + "pop_fol.bmp")
-        folderSubFoldersImage = Image.FromFile(resourcePath + "sub_fol.bmp")
+        folderEmptyImage = Image.FromFile(resourcePath + "emp_fol.png")
+        folderMixImage = Image.FromFile(resourcePath + "mix_fol.png")
+        folderPopulatedImage = Image.FromFile(resourcePath + "pop_fol.png")
+        folderSubFoldersImage = Image.FromFile(resourcePath + "sub_fol.png")
+        Try
+            folderUnaccesible = Image.FromFile(resourcePath + "lock_fol.png")
+        Catch ex As Exception
+            folderUnaccesible = Nothing
+        End Try
     End Sub
 
     Private Sub btnRename_Click(sender As Object, e As EventArgs) Handles btnRename.Click

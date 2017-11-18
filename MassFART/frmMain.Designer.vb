@@ -51,10 +51,6 @@ Partial Class frmMain
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.fbdFolder = New System.Windows.Forms.FolderBrowserDialog()
         Me.dgwFolders = New System.Windows.Forms.DataGridView()
-        Me.FullPath = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FolderPic = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.OldName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NewName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.pnlUCHeader = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnCloseFileDeletion = New MassFART.ccButton()
@@ -66,6 +62,10 @@ Partial Class frmMain
         Me.Button1 = New MassFART.ccButton()
         Me.btnDelete = New MassFART.ccButton()
         Me.btnCreate = New MassFART.ccButton()
+        Me.FullPath = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FolderPic = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.OldName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NewName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgwFolders, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlUCHeader.SuspendLayout()
@@ -291,29 +291,6 @@ Partial Class frmMain
         Me.dgwFolders.Size = New System.Drawing.Size(394, 506)
         Me.dgwFolders.TabIndex = 0
         '
-        'FullPath
-        '
-        Me.FullPath.HeaderText = ""
-        Me.FullPath.Name = "FullPath"
-        Me.FullPath.Visible = False
-        '
-        'FolderPic
-        '
-        Me.FolderPic.HeaderText = "O"
-        Me.FolderPic.Name = "FolderPic"
-        Me.FolderPic.Width = 20
-        '
-        'OldName
-        '
-        Me.OldName.HeaderText = "Old"
-        Me.OldName.Name = "OldName"
-        Me.OldName.ReadOnly = True
-        '
-        'NewName
-        '
-        Me.NewName.HeaderText = "New"
-        Me.NewName.Name = "NewName"
-        '
         'pnlUCHeader
         '
         Me.pnlUCHeader.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -470,6 +447,30 @@ Partial Class frmMain
         Me.btnCreate.Text = "Create Folder"
         Me.btnCreate.UseVisualStyleBackColor = False
         '
+        'FullPath
+        '
+        Me.FullPath.HeaderText = ""
+        Me.FullPath.Name = "FullPath"
+        Me.FullPath.Visible = False
+        '
+        'FolderPic
+        '
+        Me.FolderPic.HeaderText = "O"
+        Me.FolderPic.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
+        Me.FolderPic.Name = "FolderPic"
+        Me.FolderPic.Width = 20
+        '
+        'OldName
+        '
+        Me.OldName.HeaderText = "Old"
+        Me.OldName.Name = "OldName"
+        Me.OldName.ReadOnly = True
+        '
+        'NewName
+        '
+        Me.NewName.HeaderText = "New"
+        Me.NewName.Name = "NewName"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -507,10 +508,6 @@ Partial Class frmMain
     Friend WithEvents HelpToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents fbdFolder As System.Windows.Forms.FolderBrowserDialog
     Friend WithEvents dgwFolders As DataGridView
-    Friend WithEvents FullPath As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents FolderPic As System.Windows.Forms.DataGridViewImageColumn
-    Friend WithEvents OldName As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents NewName As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents EditToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents UndoCtrlZToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RedoCtrlYToolStripMenuItem As ToolStripMenuItem
@@ -546,4 +543,8 @@ Partial Class frmMain
     Friend WithEvents FileDeletionUtilityToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents btnCloseFileExtensionEditor As ccButton
     Friend WithEvents btnCloseFileDeletion As ccButton
+    Friend WithEvents FullPath As DataGridViewTextBoxColumn
+    Friend WithEvents FolderPic As DataGridViewImageColumn
+    Friend WithEvents OldName As DataGridViewTextBoxColumn
+    Friend WithEvents NewName As DataGridViewTextBoxColumn
 End Class
