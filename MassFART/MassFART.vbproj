@@ -123,6 +123,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="RenameParentFolder.Designer.vb">
+      <DependentUpon>RenameParentFolder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RenameParentFolder.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DeleteFiletype.resx">
@@ -145,6 +151,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenameParentFolder.resx">
+      <DependentUpon>RenameParentFolder.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

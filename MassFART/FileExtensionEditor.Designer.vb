@@ -28,9 +28,9 @@ Partial Class FileExtensionEditor
         Me.cmbExistingFileTypes = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnRename = New MassFART.ccButton()
-        Me.btnUndo = New MassFART.ccButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.btnUndo = New MassFART.ccButton()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -111,31 +111,13 @@ Partial Class FileExtensionEditor
         Me.btnRename.Text = "Rename"
         Me.btnRename.UseVisualStyleBackColor = False
         '
-        'btnUndo
-        '
-        Me.btnUndo.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(55, Byte), Integer))
-        Me.btnUndo.borderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
-        Me.btnUndo.disabledBackColor = System.Drawing.Color.Empty
-        Me.btnUndo.disabledBorderColor = System.Drawing.Color.Empty
-        Me.btnUndo.disabledForeColor = System.Drawing.Color.Empty
-        Me.btnUndo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
-        Me.btnUndo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnUndo.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUndo.ForeColor = System.Drawing.Color.DarkGray
-        Me.btnUndo.Location = New System.Drawing.Point(185, 156)
-        Me.btnUndo.Name = "btnUndo"
-        Me.btnUndo.Size = New System.Drawing.Size(105, 27)
-        Me.btnUndo.TabIndex = 17
-        Me.btnUndo.Text = "Undo"
-        Me.btnUndo.UseVisualStyleBackColor = False
-        '
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.btnUndo)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.cmbExistingFileTypes)
-        Me.Panel1.Controls.Add(Me.btnUndo)
         Me.Panel1.Controls.Add(Me.txtReplacement)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.cbSubfolders)
@@ -154,6 +136,25 @@ Partial Class FileExtensionEditor
         Me.Label3.Size = New System.Drawing.Size(124, 15)
         Me.Label3.TabIndex = 18
         Me.Label3.Text = "File Extension Rename"
+        '
+        'btnUndo
+        '
+        Me.btnUndo.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnUndo.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.btnUndo.borderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
+        Me.btnUndo.disabledBackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.btnUndo.disabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
+        Me.btnUndo.disabledForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnUndo.Enabled = False
+        Me.btnUndo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
+        Me.btnUndo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUndo.ForeColor = System.Drawing.Color.DarkGray
+        Me.btnUndo.Location = New System.Drawing.Point(185, 156)
+        Me.btnUndo.Name = "btnUndo"
+        Me.btnUndo.Size = New System.Drawing.Size(105, 27)
+        Me.btnUndo.TabIndex = 19
+        Me.btnUndo.Text = "Undo"
+        Me.btnUndo.UseVisualStyleBackColor = False
         '
         'FileExtensionEditor
         '
@@ -176,7 +177,7 @@ Partial Class FileExtensionEditor
     Friend WithEvents cmbExistingFileTypes As ComboBox
     Friend WithEvents Label1 As Label
     Friend WithEvents btnRename As MassFART.ccButton
-    Friend WithEvents btnUndo As MassFART.ccButton
     Friend WithEvents Panel1 As Panel
     Public WithEvents Label3 As Label
+    Friend WithEvents btnUndo As ccButton
 End Class

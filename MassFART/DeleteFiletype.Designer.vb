@@ -23,23 +23,23 @@ Partial Class DeleteFiletype
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.cbSubfolders = New System.Windows.Forms.CheckBox()
-        Me.btnUndo = New MassFART.ccButton()
         Me.btnRename = New MassFART.ccButton()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.cmbExistingFileTypes2 = New System.Windows.Forms.ComboBox()
         Me.txtDisplayNoFiles = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.btnRestore = New MassFART.ccButton()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.btnRestore)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.cbSubfolders)
-        Me.Panel1.Controls.Add(Me.btnUndo)
         Me.Panel1.Controls.Add(Me.btnRename)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.cmbExistingFileTypes2)
@@ -49,6 +49,16 @@ Partial Class DeleteFiletype
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(307, 198)
         Me.Panel1.TabIndex = 20
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.ForeColor = System.Drawing.Color.DarkGray
+        Me.Label3.Location = New System.Drawing.Point(12, 10)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(106, 15)
+        Me.Label3.TabIndex = 20
+        Me.Label3.Text = "File Deletion Utility"
         '
         'cbSubfolders
         '
@@ -60,24 +70,6 @@ Partial Class DeleteFiletype
         Me.cbSubfolders.TabIndex = 19
         Me.cbSubfolders.Text = "Include Subfolders"
         Me.cbSubfolders.UseVisualStyleBackColor = True
-        '
-        'btnUndo
-        '
-        Me.btnUndo.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(55, Byte), Integer))
-        Me.btnUndo.borderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
-        Me.btnUndo.disabledBackColor = System.Drawing.Color.Empty
-        Me.btnUndo.disabledBorderColor = System.Drawing.Color.Empty
-        Me.btnUndo.disabledForeColor = System.Drawing.Color.Empty
-        Me.btnUndo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
-        Me.btnUndo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnUndo.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUndo.ForeColor = System.Drawing.Color.DarkGray
-        Me.btnUndo.Location = New System.Drawing.Point(185, 156)
-        Me.btnUndo.Name = "btnUndo"
-        Me.btnUndo.Size = New System.Drawing.Size(105, 27)
-        Me.btnUndo.TabIndex = 18
-        Me.btnUndo.Text = "Restore"
-        Me.btnUndo.UseVisualStyleBackColor = False
         '
         'btnRename
         '
@@ -145,15 +137,24 @@ Partial Class DeleteFiletype
         Me.Label1.TabIndex = 11
         Me.Label1.Text = "Find Filetype:"
         '
-        'Label3
+        'btnRestore
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label3.Location = New System.Drawing.Point(12, 10)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(106, 15)
-        Me.Label3.TabIndex = 20
-        Me.Label3.Text = "File Deletion Utility"
+        Me.btnRestore.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnRestore.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.btnRestore.borderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
+        Me.btnRestore.disabledBackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.btnRestore.disabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
+        Me.btnRestore.disabledForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnRestore.Enabled = False
+        Me.btnRestore.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
+        Me.btnRestore.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRestore.ForeColor = System.Drawing.Color.DarkGray
+        Me.btnRestore.Location = New System.Drawing.Point(185, 156)
+        Me.btnRestore.Name = "btnRestore"
+        Me.btnRestore.Size = New System.Drawing.Size(105, 27)
+        Me.btnRestore.TabIndex = 21
+        Me.btnRestore.Text = "Restore"
+        Me.btnRestore.UseVisualStyleBackColor = False
         '
         'DeleteFiletype
         '
@@ -176,7 +177,7 @@ Partial Class DeleteFiletype
     Friend WithEvents txtDisplayNoFiles As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents btnRename As ccButton
-    Friend WithEvents btnUndo As ccButton
     Friend WithEvents cbSubfolders As CheckBox
     Public WithEvents Label3 As Label
+    Friend WithEvents btnRestore As ccButton
 End Class
