@@ -30,6 +30,7 @@ Partial Class FileExtensionEditor
         Me.btnRename = New MassFART.ccButton()
         Me.btnUndo = New MassFART.ccButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -37,7 +38,7 @@ Partial Class FileExtensionEditor
         '
         Me.cbSubfolders.AutoSize = True
         Me.cbSubfolders.ForeColor = System.Drawing.Color.White
-        Me.cbSubfolders.Location = New System.Drawing.Point(166, 80)
+        Me.cbSubfolders.Location = New System.Drawing.Point(166, 111)
         Me.cbSubfolders.Name = "cbSubfolders"
         Me.cbSubfolders.Size = New System.Drawing.Size(124, 19)
         Me.cbSubfolders.TabIndex = 15
@@ -50,7 +51,7 @@ Partial Class FileExtensionEditor
         Me.txtReplacement.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtReplacement.ForeColor = System.Drawing.Color.White
         Me.txtReplacement.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.txtReplacement.Location = New System.Drawing.Point(121, 51)
+        Me.txtReplacement.Location = New System.Drawing.Point(121, 82)
         Me.txtReplacement.Name = "txtReplacement"
         Me.txtReplacement.Size = New System.Drawing.Size(169, 23)
         Me.txtReplacement.TabIndex = 14
@@ -60,7 +61,7 @@ Partial Class FileExtensionEditor
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(12, 53)
+        Me.Label2.Location = New System.Drawing.Point(12, 84)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(74, 15)
         Me.Label2.TabIndex = 13
@@ -76,7 +77,7 @@ Partial Class FileExtensionEditor
         Me.cmbExistingFileTypes.FormattingEnabled = True
         Me.cmbExistingFileTypes.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.cmbExistingFileTypes.IntegralHeight = False
-        Me.cmbExistingFileTypes.Location = New System.Drawing.Point(121, 14)
+        Me.cmbExistingFileTypes.Location = New System.Drawing.Point(121, 45)
         Me.cmbExistingFileTypes.Name = "cmbExistingFileTypes"
         Me.cmbExistingFileTypes.Size = New System.Drawing.Size(169, 23)
         Me.cmbExistingFileTypes.TabIndex = 12
@@ -86,7 +87,7 @@ Partial Class FileExtensionEditor
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(12, 17)
+        Me.Label1.Location = New System.Drawing.Point(12, 48)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(77, 15)
         Me.Label1.TabIndex = 11
@@ -95,11 +96,15 @@ Partial Class FileExtensionEditor
         'btnRename
         '
         Me.btnRename.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.btnRename.borderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
+        Me.btnRename.disabledBackColor = System.Drawing.Color.Empty
+        Me.btnRename.disabledBorderColor = System.Drawing.Color.Empty
+        Me.btnRename.disabledForeColor = System.Drawing.Color.Empty
         Me.btnRename.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
         Me.btnRename.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRename.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnRename.ForeColor = System.Drawing.Color.DarkGray
-        Me.btnRename.Location = New System.Drawing.Point(15, 125)
+        Me.btnRename.Location = New System.Drawing.Point(15, 156)
         Me.btnRename.Name = "btnRename"
         Me.btnRename.Size = New System.Drawing.Size(105, 27)
         Me.btnRename.TabIndex = 16
@@ -109,11 +114,15 @@ Partial Class FileExtensionEditor
         'btnUndo
         '
         Me.btnUndo.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.btnUndo.borderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
+        Me.btnUndo.disabledBackColor = System.Drawing.Color.Empty
+        Me.btnUndo.disabledBorderColor = System.Drawing.Color.Empty
+        Me.btnUndo.disabledForeColor = System.Drawing.Color.Empty
         Me.btnUndo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
         Me.btnUndo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUndo.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnUndo.ForeColor = System.Drawing.Color.DarkGray
-        Me.btnUndo.Location = New System.Drawing.Point(185, 125)
+        Me.btnUndo.Location = New System.Drawing.Point(185, 156)
         Me.btnUndo.Name = "btnUndo"
         Me.btnUndo.Size = New System.Drawing.Size(105, 27)
         Me.btnUndo.TabIndex = 17
@@ -123,6 +132,7 @@ Partial Class FileExtensionEditor
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.cmbExistingFileTypes)
         Me.Panel1.Controls.Add(Me.btnUndo)
@@ -132,8 +142,18 @@ Partial Class FileExtensionEditor
         Me.Panel1.Controls.Add(Me.btnRename)
         Me.Panel1.Location = New System.Drawing.Point(3, 3)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(307, 168)
+        Me.Panel1.Size = New System.Drawing.Size(307, 198)
         Me.Panel1.TabIndex = 19
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.ForeColor = System.Drawing.Color.DarkGray
+        Me.Label3.Location = New System.Drawing.Point(12, 10)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(124, 15)
+        Me.Label3.TabIndex = 18
+        Me.Label3.Text = "File Extension Rename"
         '
         'FileExtensionEditor
         '
@@ -143,7 +163,7 @@ Partial Class FileExtensionEditor
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Name = "FileExtensionEditor"
-        Me.Size = New System.Drawing.Size(313, 174)
+        Me.Size = New System.Drawing.Size(313, 204)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
@@ -158,4 +178,5 @@ Partial Class FileExtensionEditor
     Friend WithEvents btnRename As MassFART.ccButton
     Friend WithEvents btnUndo As MassFART.ccButton
     Friend WithEvents Panel1 As Panel
+    Public WithEvents Label3 As Label
 End Class
