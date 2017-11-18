@@ -60,13 +60,13 @@ Partial Class frmMain
         Me.OldName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NewName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Button2 = New MassFART.ccButton()
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.pnlUserControlHeader = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DeleteFiletype1 = New MassFART.DeleteFiletype()
         Me.ccFileExtensionEditor = New MassFART.FileExtensionEditor()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgwFolders, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
+        Me.pnlUserControlHeader.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -277,6 +277,10 @@ Partial Class frmMain
         'btnDelete
         '
         Me.btnDelete.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.btnDelete.borderColor = System.Drawing.Color.Empty
+        Me.btnDelete.disabledBackColor = System.Drawing.Color.Empty
+        Me.btnDelete.disabledBorderColor = System.Drawing.Color.Empty
+        Me.btnDelete.disabledForeColor = System.Drawing.Color.Empty
         Me.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
         Me.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDelete.ForeColor = System.Drawing.Color.DarkGray
@@ -290,6 +294,10 @@ Partial Class frmMain
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.Button1.borderColor = System.Drawing.Color.Empty
+        Me.Button1.disabledBackColor = System.Drawing.Color.Empty
+        Me.Button1.disabledBorderColor = System.Drawing.Color.Empty
+        Me.Button1.disabledForeColor = System.Drawing.Color.Empty
         Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.ForeColor = System.Drawing.Color.DarkGray
@@ -303,6 +311,10 @@ Partial Class frmMain
         'btnRename
         '
         Me.btnRename.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.btnRename.borderColor = System.Drawing.Color.Empty
+        Me.btnRename.disabledBackColor = System.Drawing.Color.Empty
+        Me.btnRename.disabledBorderColor = System.Drawing.Color.Empty
+        Me.btnRename.disabledForeColor = System.Drawing.Color.Empty
         Me.btnRename.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
         Me.btnRename.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRename.ForeColor = System.Drawing.Color.DarkGray
@@ -353,6 +365,10 @@ Partial Class frmMain
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.Button2.borderColor = System.Drawing.Color.Empty
+        Me.Button2.disabledBackColor = System.Drawing.Color.Empty
+        Me.Button2.disabledBorderColor = System.Drawing.Color.Empty
+        Me.Button2.disabledForeColor = System.Drawing.Color.Empty
         Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.ForeColor = System.Drawing.Color.DarkGray
@@ -363,15 +379,15 @@ Partial Class frmMain
         Me.Button2.Text = "Save List as txt"
         Me.Button2.UseVisualStyleBackColor = False
         '
-        'Panel1
+        'pnlUserControlHeader
         '
-        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(549, 42)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(307, 30)
-        Me.Panel1.TabIndex = 14
+        Me.pnlUserControlHeader.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.pnlUserControlHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pnlUserControlHeader.Controls.Add(Me.Label1)
+        Me.pnlUserControlHeader.Location = New System.Drawing.Point(549, 42)
+        Me.pnlUserControlHeader.Name = "pnlUserControlHeader"
+        Me.pnlUserControlHeader.Size = New System.Drawing.Size(307, 30)
+        Me.pnlUserControlHeader.TabIndex = 14
         '
         'Label1
         '
@@ -408,7 +424,7 @@ Partial Class frmMain
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(868, 604)
-        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.pnlUserControlHeader)
         Me.Controls.Add(Me.DeleteFiletype1)
         Me.Controls.Add(Me.ccFileExtensionEditor)
         Me.Controls.Add(Me.Button2)
@@ -426,8 +442,8 @@ Partial Class frmMain
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         CType(Me.dgwFolders, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
+        Me.pnlUserControlHeader.ResumeLayout(False)
+        Me.pnlUserControlHeader.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -435,10 +451,7 @@ Partial Class frmMain
     Friend WithEvents FileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents OpenToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents HelpToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents btnDelete As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents fbdFolder As System.Windows.Forms.FolderBrowserDialog
-    Friend WithEvents btnRename As System.Windows.Forms.Button
     Friend WithEvents dgwFolders As DataGridView
     Friend WithEvents FullPath As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents FolderPic As System.Windows.Forms.DataGridViewImageColumn
@@ -466,12 +479,15 @@ Partial Class frmMain
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator6 As ToolStripSeparator
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Button2 As Button
     Friend WithEvents DiscardFiletypesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ccFileExtensionEditor As MassFART.FileExtensionEditor
     Friend WithEvents DeleteFiletype1 As DeleteFiletype
-    Friend WithEvents Panel1 As Panel
+    Friend WithEvents pnlUserControlHeader As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents btnCreate As ccButton
+    Friend WithEvents btnDelete As ccButton
+    Friend WithEvents Button1 As ccButton
+    Friend WithEvents btnRename As ccButton
+    Friend WithEvents Button2 As ccButton
 End Class

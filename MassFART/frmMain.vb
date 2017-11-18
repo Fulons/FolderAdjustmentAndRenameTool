@@ -6,6 +6,22 @@
 
     Private resourcePath As String
 
+    Private Const formWitdh As Integer = 565
+    Private Const extendedFormWidt As Integer = 884
+
+    Private extensionEditorShown As Boolean = False
+    Private deleteFileEditorShow As Boolean = False
+
+    Private Sub DisplayedControlsChanged()
+        If extensionEditorShown Or deleteFileEditorShow Then
+            Me.Size = New Size(884, 640)
+            pnlUserControlHeader.Show()
+        Else
+            Me.Size = New Size(565, 640)
+            pnlUserControlHeader.Hide()
+        End If
+    End Sub
+
     Private Sub LoadPath(path As String, Optional errorLoad As Boolean = False)
         If errorLoad Then
 
