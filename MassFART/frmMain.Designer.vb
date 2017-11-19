@@ -60,7 +60,7 @@ Partial Class frmMain
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtDisplayNoFiles = New System.Windows.Forms.TextBox()
-        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.flpUserControls = New System.Windows.Forms.FlowLayoutPanel()
         Me.ccFileExtensionEditor = New MassFART.FileExtensionEditor()
         Me.ccFileDeletion = New MassFART.DeleteFiletype()
         Me.ccRenameParentFolder = New MassFART.RenameParentFolder()
@@ -68,11 +68,10 @@ Partial Class frmMain
         Me.btnRename = New MassFART.ccButton()
         Me.btnDelete = New MassFART.ccButton()
         Me.btnAddFol = New MassFART.ccButton()
-        Me.CcButton2 = New MassFART.ccButton()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgwFolders, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlUCHeader.SuspendLayout()
-        Me.FlowLayoutPanel1.SuspendLayout()
+        Me.flpUserControls.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -84,7 +83,7 @@ Partial Class frmMain
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
         Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.MenuStrip1.Size = New System.Drawing.Size(955, 23)
+        Me.MenuStrip1.Size = New System.Drawing.Size(795, 23)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -293,13 +292,14 @@ Partial Class frmMain
         Me.dgwFolders.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgwFolders.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgwFolders.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer))
         Me.dgwFolders.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgwFolders.ColumnHeadersHeight = 26
         Me.dgwFolders.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FullPath, Me.FolderPic, Me.OldName, Me.NewName})
         Me.dgwFolders.Location = New System.Drawing.Point(141, 41)
         Me.dgwFolders.Name = "dgwFolders"
-        Me.dgwFolders.Size = New System.Drawing.Size(484, 600)
+        Me.dgwFolders.Size = New System.Drawing.Size(306, 600)
         Me.dgwFolders.TabIndex = 0
         '
         'FullPath
@@ -310,19 +310,24 @@ Partial Class frmMain
         '
         'FolderPic
         '
+        Me.FolderPic.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.FolderPic.FillWeight = 0.001!
         Me.FolderPic.HeaderText = "O"
         Me.FolderPic.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
         Me.FolderPic.Name = "FolderPic"
+        Me.FolderPic.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.FolderPic.Width = 20
         '
         'OldName
         '
+        Me.OldName.FillWeight = 134.7716!
         Me.OldName.HeaderText = "Old"
         Me.OldName.Name = "OldName"
         Me.OldName.ReadOnly = True
         '
         'NewName
         '
+        Me.NewName.FillWeight = 134.7716!
         Me.NewName.HeaderText = "New"
         Me.NewName.Name = "NewName"
         '
@@ -332,7 +337,7 @@ Partial Class frmMain
         Me.pnlUCHeader.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.pnlUCHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pnlUCHeader.Controls.Add(Me.Label1)
-        Me.pnlUCHeader.Location = New System.Drawing.Point(636, 42)
+        Me.pnlUCHeader.Location = New System.Drawing.Point(459, 41)
         Me.pnlUCHeader.Name = "pnlUCHeader"
         Me.pnlUCHeader.Size = New System.Drawing.Size(307, 30)
         Me.pnlUCHeader.TabIndex = 14
@@ -369,15 +374,18 @@ Partial Class frmMain
         Me.txtDisplayNoFiles.Size = New System.Drawing.Size(105, 23)
         Me.txtDisplayNoFiles.TabIndex = 19
         '
-        'FlowLayoutPanel1
+        'flpUserControls
         '
-        Me.FlowLayoutPanel1.Controls.Add(Me.ccFileExtensionEditor)
-        Me.FlowLayoutPanel1.Controls.Add(Me.ccFileDeletion)
-        Me.FlowLayoutPanel1.Controls.Add(Me.ccRenameParentFolder)
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(631, 73)
-        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(320, 571)
-        Me.FlowLayoutPanel1.TabIndex = 22
+        Me.flpUserControls.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.flpUserControls.AutoScroll = True
+        Me.flpUserControls.Controls.Add(Me.ccFileExtensionEditor)
+        Me.flpUserControls.Controls.Add(Me.ccFileDeletion)
+        Me.flpUserControls.Controls.Add(Me.ccRenameParentFolder)
+        Me.flpUserControls.Location = New System.Drawing.Point(453, 73)
+        Me.flpUserControls.Name = "flpUserControls"
+        Me.flpUserControls.Size = New System.Drawing.Size(338, 571)
+        Me.flpUserControls.TabIndex = 22
         '
         'ccFileExtensionEditor
         '
@@ -480,30 +488,13 @@ Partial Class frmMain
         Me.btnAddFol.Text = "Add Folder"
         Me.btnAddFol.UseVisualStyleBackColor = False
         '
-        'CcButton2
-        '
-        Me.CcButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(55, Byte), Integer))
-        Me.CcButton2.borderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
-        Me.CcButton2.disabledBackColor = System.Drawing.Color.Empty
-        Me.CcButton2.disabledBorderColor = System.Drawing.Color.Empty
-        Me.CcButton2.disabledForeColor = System.Drawing.Color.Empty
-        Me.CcButton2.Font = New System.Drawing.Font("Segoe UI", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CcButton2.ForeColor = System.Drawing.Color.DarkGray
-        Me.CcButton2.Location = New System.Drawing.Point(910, 507)
-        Me.CcButton2.Name = "CcButton2"
-        Me.CcButton2.Size = New System.Drawing.Size(30, 14)
-        Me.CcButton2.TabIndex = 21
-        Me.CcButton2.Text = "X"
-        Me.CcButton2.UseVisualStyleBackColor = False
-        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(955, 656)
-        Me.Controls.Add(Me.FlowLayoutPanel1)
-        Me.Controls.Add(Me.CcButton2)
+        Me.ClientSize = New System.Drawing.Size(795, 656)
+        Me.Controls.Add(Me.flpUserControls)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtDisplayNoFiles)
         Me.Controls.Add(Me.pnlUCHeader)
@@ -514,7 +505,6 @@ Partial Class frmMain
         Me.Controls.Add(Me.btnAddFol)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -523,7 +513,7 @@ Partial Class frmMain
         CType(Me.dgwFolders, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlUCHeader.ResumeLayout(False)
         Me.pnlUCHeader.PerformLayout()
-        Me.FlowLayoutPanel1.ResumeLayout(False)
+        Me.flpUserControls.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -565,14 +555,13 @@ Partial Class frmMain
     Friend WithEvents btnRename As ccButton
     Friend WithEvents Button2 As ccButton
     Friend WithEvents FileDeletionUtilityToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents FullPath As DataGridViewTextBoxColumn
-    Friend WithEvents FolderPic As DataGridViewImageColumn
-    Friend WithEvents OldName As DataGridViewTextBoxColumn
-    Friend WithEvents NewName As DataGridViewTextBoxColumn
     Friend WithEvents RenameParentFolderToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label2 As Label
     Friend WithEvents txtDisplayNoFiles As TextBox
     Friend WithEvents ccRenameParentFolder As RenameParentFolder
-    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
-    Friend WithEvents CcButton2 As ccButton
+    Friend WithEvents flpUserControls As FlowLayoutPanel
+    Friend WithEvents FullPath As DataGridViewTextBoxColumn
+    Friend WithEvents FolderPic As DataGridViewImageColumn
+    Friend WithEvents OldName As DataGridViewTextBoxColumn
+    Friend WithEvents NewName As DataGridViewTextBoxColumn
 End Class

@@ -173,5 +173,7 @@
     Private Sub RenameParentFolderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RenameParentFolderToolStripMenuItem.Click
         ccRenameParentFolder.Visible = True
     End Sub
+
+
 End Class
 '81-292
