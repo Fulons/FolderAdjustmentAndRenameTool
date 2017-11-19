@@ -8,7 +8,7 @@
     Private resourcePath As String
 
     Private Const formWitdh As Integer = 565
-    Private Const extendedFormWidt As Integer = 884
+    Private Const extendedFormWidth As Integer = 884
 
     Private extensionEditorShown As Boolean = False
     Private deleteFileEditorShow As Boolean = False
@@ -163,75 +163,15 @@
     End Sub
 
     Private Sub RenameFiletypeToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles RenameFiletypeToolStripMenuItem1.Click
-        OpenFileExtension()
+        ccFileExtensionEditor.Visible = True
     End Sub
 
     Private Sub FileDeletionUtilityToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FileDeletionUtilityToolStripMenuItem.Click
-        OpenFileDeletion()
-    End Sub
-
-
-
-
-    Private Sub OpenFileDeletion()
-        If ccFileExtensionEditor.Visible Then
-            ccFileDeletion.Location = New Point(ccFileDeletion.Location.X,
-                                                ccFileExtensionEditor.Location.Y +
-                                                ccFileExtensionEditor.Size.Height + 6)
-            btnCloseFileDeletion.Location = New Point(btnCloseFileDeletion.Location.X,
-                                                ccFileExtensionEditor.Location.Y +
-                                                ccFileExtensionEditor.Size.Height + 6)
-            ccFileExtensionEditor.Location = New Point(ccFileExtensionEditor.Location.X, 81)
-            btnCloseFileExtensionEditor.Location = New Point(btnCloseFileExtensionEditor.Location.X, 81)
-        Else
-            ccFileDeletion.Location = New Point(ccFileDeletion.Location.X, 81)
-            btnCloseFileDeletion.Location = New Point(btnCloseFileDeletion.Location.X, 81)
-        End If
-
-        ccFileDeletion.ResetForm()
-        For Each folder In dgwFolders.SelectedRows
-            ccFileDeletion.AddFolder(folder.Cells("Fullpath").Value.ToString)
-        Next
-        ccFileDeletion.Init()
         ccFileDeletion.Visible = True
-        DisplayedControlsChanged()
     End Sub
 
-    Private Sub OpenFileExtension()
-        If ccFileDeletion.Visible Then
-            ccFileExtensionEditor.Location = New Point(ccFileExtensionEditor.Location.X,
-                                                       ccFileDeletion.Location.Y +
-                                                       ccFileDeletion.Size.Height + 6)
-            btnCloseFileExtensionEditor.Location = New Point(btnCloseFileExtensionEditor.Location.X,
-                                                             ccFileDeletion.Location.Y +
-                                                             ccFileDeletion.Size.Height + 6)
-            ccFileDeletion.Location = New Point(ccFileDeletion.Location.X, 81)
-            btnCloseFileDeletion.Location = New Point(btnCloseFileDeletion.Location.X, 81)
-        Else
-            ccFileExtensionEditor.Location = New Point(ccFileExtensionEditor.Location.X, 81)
-            btnCloseFileExtensionEditor.Location = New Point(btnCloseFileExtensionEditor.Location.X, 81)
-        End If
-        ccFileExtensionEditor.ResetForm()
-        For Each folder In dgwFolders.SelectedRows
-            ccFileExtensionEditor.AddFolder(folder.Cells("Fullpath").Value.ToString)
-        Next
-        ccFileExtensionEditor.Init()
-        ccFileExtensionEditor.Visible = True
-        DisplayedControlsChanged()
-    End Sub
-
-    Private Sub CcButton1_Click(sender As Object, e As EventArgs) Handles btnCloseFileDeletion.Click
-        ccFileExtensionEditor.Location = New Point(ccFileExtensionEditor.Location.X, 81)
-        btnCloseFileExtensionEditor.Location = New Point(btnCloseFileExtensionEditor.Location.X, 81)
-        ccFileDeletion.Visible = False
-        DisplayedControlsChanged()
-    End Sub
-
-    Private Sub btnCloseFileExtensionEditor_Click(sender As Object, e As EventArgs) Handles btnCloseFileExtensionEditor.Click
-        ccFileDeletion.Location = New Point(ccFileDeletion.Location.X, 81)
-        btnCloseFileDeletion.Location = New Point(btnCloseFileDeletion.Location.X, 81)
-        ccFileExtensionEditor.Visible = False
-        DisplayedControlsChanged()
+    Private Sub RenameParentFolderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RenameParentFolderToolStripMenuItem.Click
+        ccRenameParentFolder.Visible = True
     End Sub
 End Class
 '81-292

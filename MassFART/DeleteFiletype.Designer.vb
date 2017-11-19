@@ -23,6 +23,7 @@ Partial Class DeleteFiletype
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnRestore = New MassFART.ccButton()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.cbSubfolders = New System.Windows.Forms.CheckBox()
         Me.btnRename = New MassFART.ccButton()
@@ -30,13 +31,14 @@ Partial Class DeleteFiletype
         Me.cmbExistingFileTypes2 = New System.Windows.Forms.ComboBox()
         Me.txtDisplayNoFiles = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnRestore = New MassFART.ccButton()
+        Me.CcButton2 = New MassFART.ccButton()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.CcButton2)
         Me.Panel1.Controls.Add(Me.btnRestore)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.cbSubfolders)
@@ -49,6 +51,25 @@ Partial Class DeleteFiletype
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(307, 198)
         Me.Panel1.TabIndex = 20
+        '
+        'btnRestore
+        '
+        Me.btnRestore.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnRestore.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.btnRestore.borderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
+        Me.btnRestore.disabledBackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.btnRestore.disabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
+        Me.btnRestore.disabledForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnRestore.Enabled = False
+        Me.btnRestore.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
+        Me.btnRestore.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRestore.ForeColor = System.Drawing.Color.DarkGray
+        Me.btnRestore.Location = New System.Drawing.Point(185, 156)
+        Me.btnRestore.Name = "btnRestore"
+        Me.btnRestore.Size = New System.Drawing.Size(105, 27)
+        Me.btnRestore.TabIndex = 21
+        Me.btnRestore.Text = "Restore"
+        Me.btnRestore.UseVisualStyleBackColor = False
         '
         'Label3
         '
@@ -137,24 +158,21 @@ Partial Class DeleteFiletype
         Me.Label1.TabIndex = 11
         Me.Label1.Text = "Find Filetype:"
         '
-        'btnRestore
+        'CcButton2
         '
-        Me.btnRestore.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnRestore.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(55, Byte), Integer))
-        Me.btnRestore.borderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
-        Me.btnRestore.disabledBackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(55, Byte), Integer))
-        Me.btnRestore.disabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
-        Me.btnRestore.disabledForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnRestore.Enabled = False
-        Me.btnRestore.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
-        Me.btnRestore.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRestore.ForeColor = System.Drawing.Color.DarkGray
-        Me.btnRestore.Location = New System.Drawing.Point(185, 156)
-        Me.btnRestore.Name = "btnRestore"
-        Me.btnRestore.Size = New System.Drawing.Size(105, 27)
-        Me.btnRestore.TabIndex = 21
-        Me.btnRestore.Text = "Restore"
-        Me.btnRestore.UseVisualStyleBackColor = False
+        Me.CcButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.CcButton2.borderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
+        Me.CcButton2.disabledBackColor = System.Drawing.Color.Empty
+        Me.CcButton2.disabledBorderColor = System.Drawing.Color.Empty
+        Me.CcButton2.disabledForeColor = System.Drawing.Color.Empty
+        Me.CcButton2.Font = New System.Drawing.Font("Segoe UI", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CcButton2.ForeColor = System.Drawing.Color.DarkGray
+        Me.CcButton2.Location = New System.Drawing.Point(272, 3)
+        Me.CcButton2.Name = "CcButton2"
+        Me.CcButton2.Size = New System.Drawing.Size(30, 14)
+        Me.CcButton2.TabIndex = 22
+        Me.CcButton2.Text = "X"
+        Me.CcButton2.UseVisualStyleBackColor = False
         '
         'DeleteFiletype
         '
@@ -180,4 +198,5 @@ Partial Class DeleteFiletype
     Friend WithEvents cbSubfolders As CheckBox
     Public WithEvents Label3 As Label
     Friend WithEvents btnRestore As ccButton
+    Friend WithEvents CcButton2 As ccButton
 End Class

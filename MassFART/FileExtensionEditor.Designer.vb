@@ -29,8 +29,9 @@ Partial Class FileExtensionEditor
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnRename = New MassFART.ccButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.btnUndo = New MassFART.ccButton()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.CcButton2 = New MassFART.ccButton()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -114,6 +115,7 @@ Partial Class FileExtensionEditor
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.CcButton2)
         Me.Panel1.Controls.Add(Me.btnUndo)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label2)
@@ -126,16 +128,6 @@ Partial Class FileExtensionEditor
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(307, 198)
         Me.Panel1.TabIndex = 19
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label3.Location = New System.Drawing.Point(12, 10)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(124, 15)
-        Me.Label3.TabIndex = 18
-        Me.Label3.Text = "File Extension Rename"
         '
         'btnUndo
         '
@@ -155,6 +147,32 @@ Partial Class FileExtensionEditor
         Me.btnUndo.TabIndex = 19
         Me.btnUndo.Text = "Undo"
         Me.btnUndo.UseVisualStyleBackColor = False
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.ForeColor = System.Drawing.Color.DarkGray
+        Me.Label3.Location = New System.Drawing.Point(12, 10)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(124, 15)
+        Me.Label3.TabIndex = 18
+        Me.Label3.Text = "File Extension Rename"
+        '
+        'CcButton2
+        '
+        Me.CcButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.CcButton2.borderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
+        Me.CcButton2.disabledBackColor = System.Drawing.Color.Empty
+        Me.CcButton2.disabledBorderColor = System.Drawing.Color.Empty
+        Me.CcButton2.disabledForeColor = System.Drawing.Color.Empty
+        Me.CcButton2.Font = New System.Drawing.Font("Segoe UI", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CcButton2.ForeColor = System.Drawing.Color.DarkGray
+        Me.CcButton2.Location = New System.Drawing.Point(272, 3)
+        Me.CcButton2.Name = "CcButton2"
+        Me.CcButton2.Size = New System.Drawing.Size(30, 14)
+        Me.CcButton2.TabIndex = 22
+        Me.CcButton2.Text = "X"
+        Me.CcButton2.UseVisualStyleBackColor = False
         '
         'FileExtensionEditor
         '
@@ -180,4 +198,5 @@ Partial Class FileExtensionEditor
     Friend WithEvents Panel1 As Panel
     Public WithEvents Label3 As Label
     Friend WithEvents btnUndo As ccButton
+    Friend WithEvents CcButton2 As ccButton
 End Class
