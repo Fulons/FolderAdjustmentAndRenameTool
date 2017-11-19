@@ -68,6 +68,7 @@ Partial Class frmMain
         Me.btnRename = New MassFART.ccButton()
         Me.btnDelete = New MassFART.ccButton()
         Me.btnAddFol = New MassFART.ccButton()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgwFolders, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlUCHeader.SuspendLayout()
@@ -83,7 +84,7 @@ Partial Class frmMain
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
         Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.MenuStrip1.Size = New System.Drawing.Size(795, 23)
+        Me.MenuStrip1.Size = New System.Drawing.Size(625, 23)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -299,7 +300,7 @@ Partial Class frmMain
         Me.dgwFolders.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FullPath, Me.FolderPic, Me.OldName, Me.NewName})
         Me.dgwFolders.Location = New System.Drawing.Point(141, 41)
         Me.dgwFolders.Name = "dgwFolders"
-        Me.dgwFolders.Size = New System.Drawing.Size(306, 600)
+        Me.dgwFolders.Size = New System.Drawing.Size(136, 317)
         Me.dgwFolders.TabIndex = 0
         '
         'FullPath
@@ -337,7 +338,7 @@ Partial Class frmMain
         Me.pnlUCHeader.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.pnlUCHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pnlUCHeader.Controls.Add(Me.Label1)
-        Me.pnlUCHeader.Location = New System.Drawing.Point(459, 41)
+        Me.pnlUCHeader.Location = New System.Drawing.Point(289, 41)
         Me.pnlUCHeader.Name = "pnlUCHeader"
         Me.pnlUCHeader.Size = New System.Drawing.Size(307, 30)
         Me.pnlUCHeader.TabIndex = 14
@@ -382,9 +383,9 @@ Partial Class frmMain
         Me.flpUserControls.Controls.Add(Me.ccFileExtensionEditor)
         Me.flpUserControls.Controls.Add(Me.ccFileDeletion)
         Me.flpUserControls.Controls.Add(Me.ccRenameParentFolder)
-        Me.flpUserControls.Location = New System.Drawing.Point(453, 73)
+        Me.flpUserControls.Location = New System.Drawing.Point(283, 73)
         Me.flpUserControls.Name = "flpUserControls"
-        Me.flpUserControls.Size = New System.Drawing.Size(338, 571)
+        Me.flpUserControls.Size = New System.Drawing.Size(338, 285)
         Me.flpUserControls.TabIndex = 22
         '
         'ccFileExtensionEditor
@@ -430,7 +431,7 @@ Partial Class frmMain
         Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.ForeColor = System.Drawing.Color.DarkGray
-        Me.Button2.Location = New System.Drawing.Point(18, 614)
+        Me.Button2.Location = New System.Drawing.Point(18, 331)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(105, 27)
         Me.Button2.TabIndex = 11
@@ -488,12 +489,21 @@ Partial Class frmMain
         Me.btnAddFol.Text = "Add Folder"
         Me.btnAddFol.UseVisualStyleBackColor = False
         '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 361)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(625, 22)
+        Me.StatusStrip1.TabIndex = 23
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(795, 656)
+        Me.ClientSize = New System.Drawing.Size(625, 383)
+        Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.flpUserControls)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtDisplayNoFiles)
@@ -564,4 +574,5 @@ Partial Class frmMain
     Friend WithEvents FolderPic As DataGridViewImageColumn
     Friend WithEvents OldName As DataGridViewTextBoxColumn
     Friend WithEvents NewName As DataGridViewTextBoxColumn
+    Friend WithEvents StatusStrip1 As StatusStrip
 End Class

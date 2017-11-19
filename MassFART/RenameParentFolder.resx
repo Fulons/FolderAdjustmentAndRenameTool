@@ -117,4 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="HelpProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>146, 17</value>
+  </metadata>
+  <data name="txtReplacement.ToolTip" xml:space="preserve">
+    <value>Characters to avoid in directory name
+# pound
+% percent
+&amp; ampersand
+{ left bracket
+} right bracket
+\ back slash
+&lt; left angle bracket
+&gt; right angle bracket
+* asterisk
+? question mark
+/ forward slash
+  blank spaces
+$ dollar sign
+! exclamation point
+' single quotes
+" double quotes
+: colon
+@ at sign</value>
+  </data>
 </root>

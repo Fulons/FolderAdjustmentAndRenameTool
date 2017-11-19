@@ -22,13 +22,17 @@ Partial Class RenameParentFolder
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(RenameParentFolder))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.CcButton2 = New MassFART.ccButton()
         Me.btnRename = New MassFART.ccButton()
         Me.btnUndo = New MassFART.ccButton()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtReplacement = New System.Windows.Forms.TextBox()
-        Me.CcButton2 = New MassFART.ccButton()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -38,10 +42,26 @@ Partial Class RenameParentFolder
         Me.Panel1.Controls.Add(Me.CcButton2)
         Me.Panel1.Controls.Add(Me.btnRename)
         Me.Panel1.Controls.Add(Me.btnUndo)
-        Me.Panel1.Location = New System.Drawing.Point(3, 3)
+        Me.Panel1.Location = New System.Drawing.Point(6, 3)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(307, 137)
         Me.Panel1.TabIndex = 0
+        '
+        'CcButton2
+        '
+        Me.CcButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.CcButton2.borderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
+        Me.CcButton2.disabledBackColor = System.Drawing.Color.Empty
+        Me.CcButton2.disabledBorderColor = System.Drawing.Color.Empty
+        Me.CcButton2.disabledForeColor = System.Drawing.Color.Empty
+        Me.CcButton2.Font = New System.Drawing.Font("Segoe UI", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CcButton2.ForeColor = System.Drawing.Color.DarkGray
+        Me.CcButton2.Location = New System.Drawing.Point(272, 3)
+        Me.CcButton2.Name = "CcButton2"
+        Me.CcButton2.Size = New System.Drawing.Size(30, 14)
+        Me.CcButton2.TabIndex = 24
+        Me.CcButton2.Text = "X"
+        Me.CcButton2.UseVisualStyleBackColor = False
         '
         'btnRename
         '
@@ -106,28 +126,15 @@ Partial Class RenameParentFolder
         Me.txtReplacement.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
         Me.txtReplacement.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtReplacement.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.HelpProvider1.SetHelpString(Me.txtReplacement, "# % & { } \")
         Me.txtReplacement.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.txtReplacement.Location = New System.Drawing.Point(125, 50)
         Me.txtReplacement.Name = "txtReplacement"
+        Me.HelpProvider1.SetShowHelp(Me.txtReplacement, True)
         Me.txtReplacement.Size = New System.Drawing.Size(169, 23)
         Me.txtReplacement.TabIndex = 22
         Me.txtReplacement.Text = "(displays current name)"
-        '
-        'CcButton2
-        '
-        Me.CcButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(55, Byte), Integer))
-        Me.CcButton2.borderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
-        Me.CcButton2.disabledBackColor = System.Drawing.Color.Empty
-        Me.CcButton2.disabledBorderColor = System.Drawing.Color.Empty
-        Me.CcButton2.disabledForeColor = System.Drawing.Color.Empty
-        Me.CcButton2.Font = New System.Drawing.Font("Segoe UI", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CcButton2.ForeColor = System.Drawing.Color.DarkGray
-        Me.CcButton2.Location = New System.Drawing.Point(272, 3)
-        Me.CcButton2.Name = "CcButton2"
-        Me.CcButton2.Size = New System.Drawing.Size(30, 14)
-        Me.CcButton2.TabIndex = 24
-        Me.CcButton2.Text = "X"
-        Me.CcButton2.UseVisualStyleBackColor = False
+        Me.ToolTip1.SetToolTip(Me.txtReplacement, resources.GetString("txtReplacement.ToolTip"))
         '
         'RenameParentFolder
         '
@@ -154,4 +161,6 @@ Partial Class RenameParentFolder
     Friend WithEvents btnUndo As ccButton
     Friend WithEvents btnRename As ccButton
     Friend WithEvents CcButton2 As ccButton
+    Friend WithEvents HelpProvider1 As HelpProvider
+    Friend WithEvents ToolTip1 As ToolTip
 End Class
